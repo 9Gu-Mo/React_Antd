@@ -1,0 +1,22 @@
+html {
+  line-height: 1.5;
+  font-size: 62.5%;
+}
+
+.wrap {
+  max-width: 600px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 0%;
+}
+
+h1.ant-typography {
+  margin-top: 0;
+}
