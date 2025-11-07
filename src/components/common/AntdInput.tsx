@@ -1,4 +1,4 @@
-import { Flex, Form, Input } from "antd";
+import { Button, Flex, Form, Input } from "antd";
 import Title from "antd/es/typography/Title";
 import style from "@/styles/input.module.scss";
 
@@ -18,7 +18,10 @@ export default function AntdInput() {
             name={"userPassword"}
             rules={[{ required: true, message: "비밀번호를 입력해주세요." }]}
           >
-            <Input placeholder="password" type="password" />
+            <Input.Password placeholder="password" type="password" />
+          </Form.Item>
+          <Form.Item>
+            <Button htmlType="submit">입력값 전송</Button>
           </Form.Item>
         </Form>
       </Flex>
