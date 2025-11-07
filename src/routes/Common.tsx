@@ -1,11 +1,15 @@
 import AntdButton from "../components/common/AntdButton";
-import AntdTitle from "../components/common/AntdTitle";
+import AntdCheck from "../components/common/AntdCheck";
+import AntdInput from "../components/common/AntdInput";
+import AntdSelect from "../components/common/AntdSelect";
 
 export default function Common() {
   return (
     <>
       <AntdButton />
-      <AntdTitle />
+      <AntdInput />
+      <AntdSelect />
+      <AntdCheck />
     </>
   );
 }

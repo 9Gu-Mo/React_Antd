@@ -7,7 +7,7 @@ export default function AntdButton() {
       <Flex vertical gap={10}>
         <Title level={2}>Button</Title>
         <Flex gap={"small"}>
-          <Button color="default" variant="solid">
+          <Button color="default" variant="solid" htmlType="submit">
             default-solid
           </Button>
 
