@@ -6,6 +6,7 @@ export const antdTheme: ThemeConfig = {
   },
 
   components: {
+    // button
     Button: {
       colorPrimary: "#1e88e5",
       colorPrimaryHover: "#1565c0",
@@ -16,6 +17,8 @@ export const antdTheme: ThemeConfig = {
       defaultHoverColor: "#1e88e5", // default 버튼 hover 시 텍스트 색상
       defaultHoverBg: "transparent", // hover 배경 제거
     },
+
+    // input
     Input: {
       borderRadius: 6,
       colorBgContainer: "#fff",
@@ -23,6 +26,16 @@ export const antdTheme: ThemeConfig = {
       activeBorderColor: "#1e88e5",
       hoverBg: "#fff",
       hoverBorderColor: "#ccc",
+    },
+
+    // check
+    Checkbox: {
+      colorPrimary: "#ff0000",
+    },
+
+    // radio
+    Radio: {
+      colorPrimary: "#ff0000",
     },
   },
 };

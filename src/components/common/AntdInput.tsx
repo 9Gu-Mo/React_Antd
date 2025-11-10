@@ -12,7 +12,7 @@ export default function AntdInput() {
             name={"userId"}
             rules={[{ required: true, message: "ID를 입력해주세요." }]}
           >
-            <Input placeholder="id" />
+            <Input placeholder="id" count={{ show: true, max: 10 }} />
           </Form.Item>
           <Form.Item
             name={"userPassword"}

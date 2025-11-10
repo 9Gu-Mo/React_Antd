@@ -42,19 +42,42 @@ h1.ant-typography {
       transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 
       &-checked {
+        color: #ffffff;
         background: #1677ff;
         border-color: #1677ff;
-        color: #ffffff;
       }
 
       &-disabled {
         background-color: rgba(0, 0, 0, 0.04);
         color: rgba(0, 0, 0, 0.25);
       }
+
+      &:active {
+        color: #ffffff;
+        background: #0958d9;
+        border-color: #0958d9;
+      }
     }
 
     &-inner {
       display: none;
+    }
+  }
+
+  &.chk-outlined {
+    .ant-checkbox {
+      &-wrapper {
+        &-checked {
+          color: #1677ff;
+          background-color: #ffffff;
+        }
+
+        &:active {
+          color: #1677ff;
+          background: #ffffff;
+          border-color: #1677ff;
+        }
+      }
     }
   }
 }
@@ -64,5 +87,11 @@ h1.ant-typography {
 
   > label {
     border-radius: 6px;
+
+    > div {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 }

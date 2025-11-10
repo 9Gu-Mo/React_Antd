@@ -30,6 +30,14 @@ export default function AntdCheck() {
             className="chk-button"
           />
         </Flex>
+        <Flex vertical>
+          <Title level={4}>outlined</Title>
+          <Checkbox.Group
+            options={custom}
+            defaultValue={["Banana"]}
+            className="chk-button chk-outlined"
+          />
+        </Flex>
       </Flex>
     </>
   );
