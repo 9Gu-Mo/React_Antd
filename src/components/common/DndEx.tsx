@@ -89,7 +89,6 @@ export default function DndEx() {
               display: "flex",
               gap: 32,
               justifyContent: "center",
-              marginTop: 40,
             }}
           >
             {(["left", "right"] as const).map((droppableId) => (

@@ -2,15 +2,15 @@ import { Checkbox, Flex, type CheckboxOptionType } from "antd";
 import Title from "antd/es/typography/Title";
 
 const options: CheckboxOptionType<string>[] = [
-  { label: "Apple", value: "Apple", className: "label-1" },
-  { label: "Pear", value: "Pear", className: "label-2" },
-  { label: "Orange", value: "Orange", className: "label-3", disabled: true },
+  { label: "Apple", value: "Apple" },
+  { label: "Pear", value: "Pear" },
+  { label: "Orange", value: "Orange", disabled: true },
 ];
 
 const custom: CheckboxOptionType<string>[] = [
-  { label: "Banana", value: "Banana", className: "label-1" },
-  { label: "Grape", value: "Grape", className: "label-2" },
-  { label: "Kiwi", value: "Kiwi", className: "label-3", disabled: true },
+  { label: "Banana", value: "Banana" },
+  { label: "Grape", value: "Grape" },
+  { label: "Kiwi", value: "Kiwi", disabled: true },
 ];
 
 export default function AntdCheck() {
@@ -23,11 +23,11 @@ export default function AntdCheck() {
           <Checkbox.Group options={options} defaultValue={["Apple"]} />
         </Flex>
         <Flex vertical>
-          <Title level={4}>button type</Title>
+          <Title level={4}>solid</Title>
           <Checkbox.Group
             options={custom}
             defaultValue={["Banana"]}
-            className="chk-type-button"
+            className="chk-button"
           />
         </Flex>
       </Flex>
