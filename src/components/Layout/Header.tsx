@@ -20,7 +20,7 @@ export default function Header() {
       <header className="header">
         <Flex align="center">
           <a href="" className="logo">
-            <img src="./public/logo.png" alt="" />
+            <img src="/logo.png" alt="" />
           </a>
           <Select
             className="sel-lang"

@@ -6,7 +6,7 @@ html {
 
 .wrap {
   min-height: 100dvh;
-  background: url("../public/introBg.png") no-repeat top right / auto 100%;
+  background: url("/introBg.png") no-repeat top right / auto 100%;
 }
 
 .inner {
@@ -124,11 +124,11 @@ h1.ant-typography {
     background-size: 64rem 40rem;
 
     &.generation {
-      background-image: url("../public/intro01.png");
+      background-image: url("/intro01.png");
     }
 
     &.participation {
-      background-image: url("../public/intro02.png");
+      background-image: url("/intro02.png");
     }
 
     a {
