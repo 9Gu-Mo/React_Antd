@@ -1,13 +1,11 @@
 import { Flex } from "antd";
 import Title from "antd/es/typography/Title";
 import { Link } from "react-router-dom";
-import Header from "../components/Layout/Header";
 
 // root
 export default function Home() {
   return (
     <>
-      <Header />
       <Flex vertical align="center" className="intro">
         <Title level={1}>
           안녕하세요!

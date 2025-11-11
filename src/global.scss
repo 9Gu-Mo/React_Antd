@@ -5,15 +5,16 @@ html {
 }
 
 .wrap {
+  position: relative;
   min-height: 100dvh;
-  background: url("/introBg.png") no-repeat top right / auto 100%;
-}
-
-.inner {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: env(safe-area-inset-top);
+  padding: 8rem 2rem 4.8rem;
   flex: 1 1 0%;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 h1.ant-typography {
@@ -98,7 +99,9 @@ h1.ant-typography {
 }
 
 .intro {
-  margin-top: 8.2rem;
+  min-height: 100vh;
+  padding-top: 20rem;
+  background: url("/introBg.png") no-repeat top right / auto 100%;
 
   .ant-typography {
     text-align: center;
@@ -166,5 +169,16 @@ h1.ant-typography {
       margin-top: 3rem;
       margin-bottom: 0;
     }
+  }
+}
+
+.bottom-fix {
+  position: absolute;
+  bottom: 48px;
+  left: 20px;
+  right: 20px;
+
+  > button {
+    width: 100%;
   }
 }

@@ -4,12 +4,13 @@ export const antdTheme: ThemeConfig = {
   token: {
     fontFamily: "'Pretendard'",
     fontSizeHeading1: 48,
+    fontSizeHeading2: 32,
   },
 
   components: {
     // button
     Button: {
-      colorPrimary: "#1e88e5",
+      colorPrimary: "#6152ED",
       colorPrimaryHover: "#1565c0",
       colorPrimaryActive: "#0d47a1",
       controlHeight: 40,

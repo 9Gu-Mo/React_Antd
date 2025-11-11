@@ -1,9 +1,14 @@
 import { Flex, Select } from "antd";
 
-import "@/styles/layout/header.scss";
+// import "@/styles/layout/header.scss";
+import style from "@/styles/layout/header.module.scss";
 import IconArrowDown from "../Icon/IconArrowDown";
 
-export default function Header() {
+interface Props {
+  intro?: boolean;
+}
+
+export default function Header(props: Props) {
   const options = [
     {
       value: "KR",
@@ -17,21 +22,27 @@ export default function Header() {
 
   return (
     <>
-      <header className="header">
-        <Flex align="center">
-          <a href="" className="logo">
-            <img src="/logo.png" alt="" />
-          </a>
-          <Select
-            className="sel-lang"
-            optionLabelProp="label"
-            defaultValue="KR"
-            style={{ width: 108, marginLeft: "auto" }}
-            options={options}
-            suffixIcon={<IconArrowDown />}
-          />
-        </Flex>
-      </header>
+      {props.intro ? (
+        <header className={`${style.header} ${style.intro}`}>
+          <Flex align="center">
+            <a href="" className={style.logo}>
+              <img src="/logo.png" alt="" />
+            </a>
+            <Select
+              className={style.selLang}
+              optionLabelProp="label"
+              defaultValue="KR"
+              style={{ width: 108, marginLeft: "auto" }}
+              options={options}
+              suffixIcon={<IconArrowDown />}
+            />
+          </Flex>
+        </header>
+      ) : (
+        <header>
+          <Flex align="center"></Flex>
+        </header>
+      )}
     </>
   );
 }

@@ -1,0 +1,35 @@
+.header {
+  &.intro {
+    position: absolute;
+    padding: 40px 60px 0;
+    width: 100%;
+
+    .logo {
+      width: 160px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .selLang {
+      [class^="ant-select-selector"] {
+        border-radius: 100px;
+        border-color: #777777;
+        padding: 0;
+      }
+      [class^="ant-select-selection-search"] {
+        padding-inline-end: 0;
+      }
+      [class^="ant-select-selection-item"] {
+        padding-inline-end: 0;
+        padding-left: 44px;
+        background: url("/ico_global.png") no-repeat 12px center / 24px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: #222222;
+      }
+    }
+  }
+}
