@@ -1,12 +1,12 @@
 html {
   line-height: 1.5;
+  font-size: 62.5%;
+  letter-spacing: -0.05em;
 }
 
 .wrap {
-  max-width: 600px;
   min-height: 100dvh;
-  margin: 0 auto;
-  padding: 0 10px;
+  background: url("../public/introBg.png") no-repeat top right / auto 100%;
 }
 
 .inner {
@@ -24,7 +24,7 @@ h1.ant-typography {
   margin-bottom: 0;
 
   & + .ant-form-item {
-    margin-top: 10px;
+    margin-top: 1rem;
   }
 }
 
@@ -42,8 +42,6 @@ h1.ant-typography {
       transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 
       &-checked {
-        color: #ffffff;
-        background: #1677ff;
         border-color: #1677ff;
       }
 
@@ -51,31 +49,34 @@ h1.ant-typography {
         background-color: rgba(0, 0, 0, 0.04);
         color: rgba(0, 0, 0, 0.25);
       }
-
-      &:active {
-        color: #ffffff;
-        background: #0958d9;
-        border-color: #0958d9;
-      }
     }
 
     &-inner {
       display: none;
     }
+
+    > div {
+      display: none;
+    }
   }
 
-  &.chk-outlined {
+  &.solid {
+    .ant-checkbox {
+      &-wrapper {
+        &-checked {
+          color: #ffffff;
+          background: #1677ff;
+        }
+      }
+    }
+  }
+
+  &.outlined {
     .ant-checkbox {
       &-wrapper {
         &-checked {
           color: #1677ff;
           background-color: #ffffff;
-        }
-
-        &:active {
-          color: #1677ff;
-          background: #ffffff;
-          border-color: #1677ff;
         }
       }
     }
@@ -92,6 +93,78 @@ h1.ant-typography {
       display: none;
       visibility: hidden;
       opacity: 0;
+    }
+  }
+}
+
+.intro {
+  margin-top: 8.2rem;
+
+  .ant-typography {
+    text-align: center;
+    color: #222;
+    font-weight: 400;
+    line-height: 6.8rem;
+    margin-bottom: 6rem;
+
+    span {
+      color: #6152ed;
+    }
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  .card {
+    width: 64rem;
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 64rem 40rem;
+
+    &.generation {
+      background-image: url("../public/intro01.png");
+    }
+
+    &.participation {
+      background-image: url("../public/intro02.png");
+    }
+
+    a {
+      display: block;
+      padding: 8rem 15rem 0 6rem;
+      height: 100%;
+      color: #ffffff;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    b {
+      display: block;
+      font-size: 2rem;
+    }
+
+    strong {
+      display: block;
+      font-size: 4.8rem;
+      margin-top: 2rem;
+
+      em {
+        font-weight: 500;
+        font-style: normal;
+      }
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 3.2rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 3rem;
+      margin-bottom: 0;
     }
   }
 }

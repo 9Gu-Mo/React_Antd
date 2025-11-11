@@ -3,6 +3,7 @@ import type { ThemeConfig } from "antd";
 export const antdTheme: ThemeConfig = {
   token: {
     fontFamily: "'Pretendard'",
+    fontSizeHeading1: 48,
   },
 
   components: {
@@ -29,13 +30,9 @@ export const antdTheme: ThemeConfig = {
     },
 
     // check
-    Checkbox: {
-      colorPrimary: "#ff0000",
-    },
+    Checkbox: {},
 
     // radio
-    Radio: {
-      colorPrimary: "#ff0000",
-    },
+    Radio: {},
   },
 };

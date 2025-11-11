@@ -1,6 +1,6 @@
 import AntdButton from "../components/common/AntdButton";
-import AntdCheck from "../components/common/AntdCheck";
-import AntdInput from "../components/common/AntdInput";
+import AntdCheckWrap from "../components/common/AntdCheckWrap";
+import AntdInputWrap from "../components/common/AntdInputWrap";
 import AntdModal from "../components/common/AntdModal";
 import AntdRadio from "../components/common/AntdRadio";
 import AntdSelect from "../components/common/AntdSelect";
@@ -11,9 +11,9 @@ export default function Common() {
   return (
     <>
       <AntdButton />
-      <AntdInput />
+      <AntdInputWrap />
       <AntdSelect />
-      <AntdCheck />
+      <AntdCheckWrap />
       <AntdRadio />
       <AntdSteps />
       <AntdModal />
