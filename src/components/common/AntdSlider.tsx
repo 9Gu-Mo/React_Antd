@@ -1,19 +1,28 @@
-import { Slider, type SliderSingleProps } from "antd";
+import SliderFiveStep from "./SliderFiveStep";
 
 export default function AntdSlider() {
-  const marks: SliderSingleProps["marks"] = {
-    0: "전혀 차이 없음",
-    25: "약간의 차이",
-    50: "중간 정도 차이",
-    75: "상단한 차이",
-    100: "극단적인 차이",
-  };
+  // 15단계
+  // const marksFiftStep: SliderSingleProps["marks"] = {
+  //   0.0: "1",
+  //   7.14: "2",
+  //   14.29: "3",
+  //   21.43: "4",
+  //   28.57: "5",
+  //   35.71: "6",
+  //   42.86: "7",
+  //   50.0: "8",
+  //   57.14: "9",
+  //   64.29: "10",
+  //   71.43: "11",
+  //   78.57: "12",
+  //   85.71: "13",
+  //   92.86: "14",
+  //   100.0: "15",
+  // };
 
   return (
     <>
-      <div className="slider-wrap">
-        <Slider marks={marks} step={25} />
-      </div>
+      <SliderFiveStep />
     </>
   );
 }

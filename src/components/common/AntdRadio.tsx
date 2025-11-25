@@ -68,6 +68,20 @@ export default function AntdRadio() {
             ]}
           />
         </Flex>
+
+        <Flex vertical>
+          <Title level={4}>custom</Title>
+          <Radio.Group
+            className="rdo-custom"
+            options={[
+              { value: "rdo-1", label: "매우종지 않음" },
+              { value: "rdo-2", label: "종지않음" },
+              { value: "rdo-3", label: "보통" },
+              { value: "rdo-4", label: "좋음" },
+              { value: "rdo-5", label: "매우좋음" },
+            ]}
+          />
+        </Flex>
       </Flex>
     </>
   );
