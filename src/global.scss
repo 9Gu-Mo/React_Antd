@@ -155,6 +155,11 @@ h1.ant-typography {
   }
 
   .ant-radio-wrapper-checked {
+    .ant-radio-label {
+      color: #6152ed;
+      font-weight: bold;
+    }
+
     .ant-radio-inner {
       width: 39px;
       height: 39px;
@@ -169,6 +174,7 @@ h1.ant-typography {
           linear-gradient(90deg, rgba(97, 82, 237, 1) 0%, rgba(91, 110, 237, 1) 100%);
         background-repeat: no-repeat;
         background-position: center;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.22);
       }
 
       &::after {
