@@ -7,7 +7,7 @@ html {
 .wrap {
   position: relative;
   min-height: 100dvh;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-bottom: env(safe-area-inset-bottom);
   padding-top: env(safe-area-inset-top);
@@ -180,5 +180,120 @@ h1.ant-typography {
 
   > button {
     width: 100%;
+  }
+}
+
+.tbl-result {
+  th,
+  td {
+    text-align: center;
+    word-break: keep-all;
+    border-left: 1px solid #f0f0f0;
+  }
+
+  tr {
+    &:first-child {
+      th {
+        border-bottom: 1px solid #f0f0f0;
+        &:first-child {
+          border-left: 0;
+        }
+      }
+    }
+  }
+
+  th {
+    &::before {
+      display: none;
+    }
+  }
+
+  td {
+    &:first-child {
+      border-left: 0;
+    }
+  }
+}
+
+.tbl {
+  table {
+    width: 100%;
+    th,
+    td {
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.slider-wrap {
+  margin: 20px 0;
+
+  &:where(*:hover) {
+    background: inherit;
+    color: inherit;
+    border-color: inherit;
+  }
+
+  .ant-slider {
+    height: 16px;
+
+    &-track {
+      height: 16px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+    }
+
+    &:hover {
+      .ant-slider-track {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+    }
+
+    &-handle {
+      width: 44px;
+      height: 44px;
+      top: 50%;
+
+      &::before,
+      &:hover::before,
+      &:active::before,
+      &:focus::before {
+        width: 44px;
+        height: 44px;
+        background-color: rgba(97, 82, 237, 0.1);
+        inset-inline-start: -17px;
+        inset-block-start: -17px;
+        border-radius: 50%;
+      }
+
+      &::after,
+      &:hover::after,
+      &:active::after,
+      &:focus::after {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(90deg, rgba(97, 82, 237, 1) 0%, rgba(91, 110, 237, 1) 100%);
+        inset-block-start: -11px;
+        inset-inline-start: -11px;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+
+    &-rail {
+      height: 16px;
+      border-radius: 10px;
+      background-color: #e8edf4;
+    }
+
+    &-step {
+      height: 16px;
+      border-radius: 10px;
+    }
   }
 }

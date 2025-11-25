@@ -4,8 +4,11 @@ import AntdInputWrap from "../components/common/AntdInputWrap";
 import AntdModal from "../components/common/AntdModal";
 import AntdRadio from "../components/common/AntdRadio";
 import AntdSelect from "../components/common/AntdSelect";
+import AntdSlider from "../components/common/AntdSlider";
 import AntdSteps from "../components/common/AntdSteps";
-import DndEx from "../components/common/DndEx";
+import AntdTable from "../components/common/AntdTable";
+import TableCoales from "../components/common/TableCoales";
+import TableSeparation from "../components/common/TableSeparation";
 
 export default function Common() {
   return (
@@ -17,7 +20,11 @@ export default function Common() {
       <AntdRadio />
       <AntdSteps />
       <AntdModal />
-      <DndEx />
+      <AntdTable />
+      <TableSeparation />
+      <TableCoales />
+      <AntdSlider />
+      <div style={{ height: "500px" }}></div>
     </>
   );
 }
