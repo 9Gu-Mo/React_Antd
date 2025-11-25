@@ -16,7 +16,7 @@ export default function Home() {
         </Title>
         <Flex gap={60}>
           <div className="card generation">
-            <Link to={"/"}>
+            <Link to={"/common"}>
               <b>Create Survey</b>
               <strong>
                 설문지 <em>생성</em>
