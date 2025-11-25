@@ -110,7 +110,7 @@ h1.ant-typography {
     top: 12px;
     left: 25px;
     right: 25px;
-    height: 1px;
+    height: 2px;
     background-color: #ebeff5;
   }
 
@@ -119,6 +119,7 @@ h1.ant-typography {
     align-items: center;
     justify-content: center;
     width: 60px;
+    margin-inline-end: 0;
 
     .ant-radio {
       min-height: 39px;
@@ -128,6 +129,7 @@ h1.ant-typography {
         height: 25px;
         background-color: #ebeff5;
         border: none;
+        transition: none;
 
         &::before {
           content: "";
@@ -170,6 +172,12 @@ h1.ant-typography {
       }
 
       &::after {
+        display: none;
+      }
+    }
+
+    .ant-radio-checked {
+      > div {
         display: none;
       }
     }
