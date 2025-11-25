@@ -1,10 +1,18 @@
-import { Slider } from "antd";
+import { Slider, type SliderSingleProps } from "antd";
 
 export default function AntdSlider() {
+  const marks: SliderSingleProps["marks"] = {
+    0: "전혀 차이 없음",
+    25: "약간의 차이",
+    50: "중간 정도 차이",
+    75: "상단한 차이",
+    100: "극단적인 차이",
+  };
+
   return (
     <>
       <div className="slider-wrap">
-        <Slider step={10} />
+        <Slider marks={marks} step={25} />
       </div>
     </>
   );

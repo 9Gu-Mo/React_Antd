@@ -257,7 +257,7 @@ h1.ant-typography {
     &-handle {
       width: 44px;
       height: 44px;
-      top: 50%;
+      top: -50%;
 
       &::before,
       &:hover::before,
@@ -269,6 +269,9 @@ h1.ant-typography {
         inset-inline-start: -17px;
         inset-block-start: -17px;
         border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
       }
 
       &::after,
@@ -282,6 +285,9 @@ h1.ant-typography {
         inset-inline-start: -11px;
         box-shadow: none;
         outline: none;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
       }
     }
 
@@ -294,6 +300,34 @@ h1.ant-typography {
     &-step {
       height: 16px;
       border-radius: 10px;
+    }
+
+    &-dot {
+      top: 50%;
+      transform: translate(-50%, -50%) !important;
+
+      &:first-child {
+        left: 2% !important;
+      }
+
+      &:last-child {
+        left: 98% !important;
+      }
+    }
+
+    &-mark {
+      &-text {
+        width: 50px;
+        top: 20px;
+
+        &:first-child {
+          left: 2% !important;
+        }
+
+        &:last-child {
+          left: 98% !important;
+        }
+      }
     }
   }
 }
