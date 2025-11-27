@@ -9,12 +9,15 @@ interface Props {
   variant?: ButtonProps["variant"];
   type?: ButtonProps["type"];
   className?: string;
+  children?: ReactNode;
 }
 
 export default function BottomFixButton(props: Props) {
   return (
     <>
-      <Flex className="bottom-fix">
+      <Flex className="bottom-fix" gap={props.children ? 8 : ""}>
+        {/* 1줄 2개짜리 추가 props */}
+        {props.children}
         <Button
           type={props.type}
           className={props.className}

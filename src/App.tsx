@@ -1,17 +1,22 @@
+// lib
 import { Outlet, useLocation } from "react-router-dom";
 import { Flex } from "antd";
+
+// component
 import Header from "./components/Layout/Header";
 
 export default function App() {
   const location = useLocation();
-  const isIntroPage = location.pathname === "/";
+
+  // url로 header 노출 페이지 제어
+  const isInfoPage = location.pathname === "/info"; // 사용자 정보 입력
+  const isNoticePage = location.pathname === "/notice"; // 안내
 
   return (
     <>
-      <Flex className={isIntroPage ? "" : "wrap"} vertical>
-        {isIntroPage ? <Header intro /> : <Header />}
-        <main className={isIntroPage ? "" : "inner"}>
-          {/* 각 페이지 렌더링 부분 */}
+      <Flex className="wrap" vertical>
+        {isInfoPage || isNoticePage ? "" : <Header />}
+        <main>
           <Outlet />
         </main>
       </Flex>

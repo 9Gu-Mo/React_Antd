@@ -14,12 +14,18 @@ interface Props {
   maxLength?: number;
   allowClear?: boolean;
   prefix?: ReactNode;
+  classNmae?: string;
 }
 
 export default function AntdInput(props: Props) {
   return (
     <>
-      <Form.Item label={props.label} name={props.name} rules={props.rules}>
+      <Form.Item
+        className={`ant-input-wrap ${props.classNmae}`}
+        label={props.label}
+        name={props.name}
+        rules={props.rules}
+      >
         <Input
           placeholder={props.placeholder}
           type={props.type}
