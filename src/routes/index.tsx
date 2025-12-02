@@ -5,6 +5,7 @@ import NotFound from "./NotFound";
 import Common from "./Common";
 import Info from "./Info";
 import Notice from "./Notice";
+import TriangleEvaluation from "./TriangleEvaluation";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "info", element: <Info /> }, // 사용자 정보 입력
       { path: "notice", element: <Notice /> }, // 안내
+      { path: "triangle", element: <TriangleEvaluation /> }, // 평가
       { path: "common", element: <Common /> }, // 공통
       { path: "*", element: <NotFound /> }, // 404
     ],

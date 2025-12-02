@@ -2,6 +2,7 @@ html {
   line-height: 1.5;
   font-size: 62.5%;
   letter-spacing: -0.05em;
+  font-family: "Pretendard", sans-serif;
 }
 
 .wrap {
@@ -15,8 +16,6 @@ html {
   flex: 1 1 0%;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
-  // background: url("../public/bg.png") no-repeat center;
-  // background-size: cover;
 }
 
 h1.ant-typography {
@@ -87,10 +86,44 @@ h1.ant-typography {
 }
 
 .rdo-button {
-  gap: 8px;
+  gap: 12px;
+
+  .ant-radio {
+    &-button-wrapper {
+      span {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      &-checked {
+        span {
+          font-weight: 600;
+
+          &:last-child {
+            background: url("../public/icon-check-purple.svg") no-repeat top center;
+            position: absolute;
+            top: 14px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        &:not(.ant-radio-button-wrapper-disabled) {
+          &:hover {
+            color: #6152ed;
+            border-color: #6152ed;
+          }
+        }
+      }
+    }
+  }
 
   > label {
-    border-radius: 6px;
+    border-radius: 12px;
+
+    &:hover {
+      color: #222222;
+    }
 
     > div {
       display: none;
@@ -432,10 +465,6 @@ h1.ant-typography {
       &:last-child {
         left: 98% !important;
       }
-
-      // &:nth-child(2n) {
-      //   display: none;
-      // }
     }
 
     &-mark {
@@ -450,10 +479,6 @@ h1.ant-typography {
         &:last-child {
           left: 98% !important;
         }
-
-        // &:nth-child(2n) {
-        //   display: none;
-        // }
       }
     }
   }
@@ -551,6 +576,64 @@ h2.ant-typography {
     > span {
       display: block;
       margin-top: 16px;
+    }
+  }
+}
+
+// evaluation
+.evaluation {
+  > .ant-flex {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #f4f7fd;
+  }
+
+  .text {
+    color: #333;
+    font-size: 14px;
+    word-break: keep-all;
+
+    b {
+      font-weight: bold;
+    }
+
+    span {
+      color: #6152ed;
+    }
+  }
+
+  .content {
+    margin-top: 48px;
+
+    em {
+      font-weight: 600;
+      color: #ccc;
+      font-size: 30px;
+    }
+
+    > b {
+      display: block;
+      margin-top: 8px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    p {
+      margin-top: 4px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .ant-radio {
+      &-group {
+        margin-top: 20px;
+      }
+
+      &-button-wrapper {
+        position: relative;
+        height: 84px;
+        line-height: 82px;
+      }
     }
   }
 }

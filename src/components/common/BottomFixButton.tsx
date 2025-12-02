@@ -10,6 +10,7 @@ interface Props {
   type?: ButtonProps["type"];
   className?: string;
   children?: ReactNode;
+  disabled?: boolean;
 }
 
 export default function BottomFixButton(props: Props) {
@@ -24,6 +25,7 @@ export default function BottomFixButton(props: Props) {
           variant={props.variant}
           color={props.color}
           htmlType={props.htmlType}
+          disabled={props.disabled}
         >
           {props.text}
         </Button>

@@ -29,6 +29,8 @@ export const antdTheme: ThemeConfig = {
       borderRadius: 8,
       fontWeight: 500,
       fontSize: 18,
+      colorBgContainerDisabled: "#EBEFF5",
+      borderColorDisabled: "#EBEFF5",
       colorTextDisabled: "#bbb",
     },
 
@@ -73,6 +75,15 @@ export const antdTheme: ThemeConfig = {
     Checkbox: {},
 
     // radio
-    Radio: {},
+    Radio: {
+      // border
+      borderRadius: 12,
+
+      // color
+      colorPrimary: "#6152ED",
+
+      // hover
+      controlOutline: "#6152ED",
+    },
   },
 };

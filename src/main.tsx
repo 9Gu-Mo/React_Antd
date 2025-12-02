@@ -4,8 +4,9 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/index.tsx";
 
 // style
-import "antd/dist/reset.css";
+import "./styles/reset.scss";
 import "./global.scss";
+import "./styles/fonts.scss";
 import { ConfigProvider } from "antd";
 import { antdTheme } from "./theme/antdTheme.ts";
 
