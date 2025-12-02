@@ -8,6 +8,9 @@ export default function TriangleEvaluation() {
 
   const onChangeOutlined = (e: RadioChangeEvent) => {
     setValueOutlined(e.target.value);
+
+    // rdo checked
+    console.log(e.target.checked);
   };
 
   return (
@@ -45,7 +48,7 @@ export default function TriangleEvaluation() {
           />
         </div>
       </div>
-      <BottomFixButton text="다음" type="primary" disabled>
+      <BottomFixButton text="다음" type="primary" disabled={!valueOutlined}>
         <Button>이전</Button>
       </BottomFixButton>
     </>
