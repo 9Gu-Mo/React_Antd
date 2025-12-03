@@ -11,7 +11,7 @@ const { Text } = Typography;
 export default function Info() {
   return (
     <>
-      <div className="content">
+      <div className="info">
         <Title level={3} className="ft-cl-light-gray">
           Code <span className="ft-cl-primary">AB206</span>
         </Title>

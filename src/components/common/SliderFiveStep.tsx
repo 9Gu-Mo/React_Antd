@@ -1,4 +1,4 @@
-import { Slider, type SliderSingleProps } from "antd";
+import { Slider, Typography, type SliderSingleProps } from "antd";
 
 export default function SliderFiveStep() {
   // 5단계
@@ -13,6 +13,7 @@ export default function SliderFiveStep() {
   return (
     <>
       <div className="slider-wrap">
+        <Typography>전혀 차이 없음</Typography>
         <Slider
           marks={marksFiveStep}
           step={null}

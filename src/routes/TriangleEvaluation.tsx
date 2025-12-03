@@ -1,7 +1,11 @@
 // lib
 import { Button, Flex, Radio, type RadioChangeEvent } from "antd";
-import BottomFixButton from "../components/common/BottomFixButton";
+
+// hook
 import { useState } from "react";
+
+// component
+import BottomFixButton from "../components/common/BottomFixButton";
 
 export default function TriangleEvaluation() {
   const [valueOutlined, setValueOutlined] = useState();

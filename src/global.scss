@@ -12,10 +12,16 @@ html {
   margin: 0 auto;
   padding-bottom: env(safe-area-inset-bottom);
   padding-top: env(safe-area-inset-top);
-  padding: 8rem 2rem 4.8rem;
-  flex: 1 1 0%;
+  padding: 80px 0 48px;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
+
+  > main {
+    height: calc(100vh - 80px - 48px);
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
 }
 
 h1.ant-typography {
@@ -26,7 +32,7 @@ h1.ant-typography {
   margin-bottom: 0;
 
   & + .ant-form-item {
-    margin-top: 1rem;
+    margin-top: 10px;
   }
 }
 
@@ -225,85 +231,9 @@ h1.ant-typography {
   }
 }
 
-.intro {
-  min-height: 100vh;
-  padding-top: 20rem;
-  background: url("/introBg.png") no-repeat top right / auto 100%;
-
-  .ant-typography {
-    text-align: center;
-    color: #222;
-    font-weight: 400;
-    line-height: 6.8rem;
-    margin-bottom: 6rem;
-
-    span {
-      color: #6152ed;
-    }
-
-    b {
-      font-weight: 600;
-    }
-  }
-
-  .card {
-    width: 64rem;
-    height: 40rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 64rem 40rem;
-
-    &.generation {
-      background-image: url("/intro01.png");
-    }
-
-    &.participation {
-      background-image: url("/intro02.png");
-    }
-
-    a {
-      display: block;
-      padding: 8rem 15rem 0 6rem;
-      height: 100%;
-      color: #ffffff;
-
-      &:hover {
-        color: #ffffff;
-      }
-    }
-
-    b {
-      display: block;
-      font-size: 2rem;
-    }
-
-    strong {
-      display: block;
-      font-size: 4.8rem;
-      margin-top: 2rem;
-
-      em {
-        font-weight: 500;
-        font-style: normal;
-      }
-    }
-
-    p {
-      font-size: 2rem;
-      line-height: 3.2rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.85);
-      margin-top: 3rem;
-      margin-bottom: 0;
-    }
-  }
-}
-
 .bottom-fix {
-  position: absolute;
-  bottom: 48px;
-  left: 20px;
-  right: 20px;
+  width: 100%;
+  padding: 20px 0;
 
   > button {
     height: 56px;
@@ -370,7 +300,22 @@ h1.ant-typography {
 }
 
 .slider-wrap {
-  margin: 20px 0;
+  position: relative;
+  padding-top: 125px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  > article {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 18px;
+    color: #6152ed;
+  }
 
   &:where(*:hover) {
     background: inherit;
@@ -522,12 +467,12 @@ h1.ant-typography {
 
 .mt {
   &-60 {
-    margin-top: 6rem;
+    margin-top: 60px;
   }
 }
 
 // info
-.content {
+.info {
   strong {
     font-size: 20px;
     color: #aaaaaa;
@@ -549,11 +494,11 @@ h1.ant-typography {
 
 h2.ant-typography {
   &.product {
-    margin-top: 4rem;
+    margin-top: 40px;
 
     & + span.ant-typography {
       display: block;
-      margin-top: 0.8rem;
+      margin-top: 8px;
     }
   }
 }
@@ -582,10 +527,16 @@ h2.ant-typography {
 
 // evaluation
 .evaluation {
+  flex: 1 1 0%;
+
   > .ant-flex {
     padding: 16px;
     border-radius: 12px;
     background-color: #f4f7fd;
+  }
+
+  > .ant-typography {
+    margin-bottom: 12px;
   }
 
   .text {
@@ -604,6 +555,12 @@ h2.ant-typography {
 
   .content {
     margin-top: 48px;
+
+    & + .content {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid #ddd;
+    }
 
     em {
       font-weight: 600;
