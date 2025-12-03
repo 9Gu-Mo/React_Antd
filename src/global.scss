@@ -39,7 +39,7 @@ h1.ant-typography {
   margin-bottom: 0;
 
   & + .ant-form-item {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 
@@ -355,8 +355,8 @@ h1.ant-typography {
         width: 44px;
         height: 44px;
         background-color: rgba(97, 82, 237, 0.1);
-        inset-inline-start: -17px;
-        inset-block-start: -17px;
+        inset-inline-start: unset;
+        inset-block-start: unset;
         border-radius: 50%;
         transform: translate(-50%, -50%);
         top: 50%;
@@ -419,7 +419,7 @@ h1.ant-typography {
     &-mark {
       &-text {
         width: 50px;
-        top: 20px;
+        top: 25px;
 
         &:first-child {
           left: 2% !important;
@@ -431,9 +431,33 @@ h1.ant-typography {
       }
     }
   }
+
+  &.slider-fifteen {
+    padding-top: 85px;
+
+    .ant-slider-dot {
+      width: 2px;
+      border-radius: 1px;
+      background-color: rgba(255, 255, 255, 0.5);
+
+      &:nth-child(2n) {
+        width: 1px;
+        height: 4px;
+      }
+    }
+
+    .ant-slider-mark {
+      &-text {
+        width: auto;
+        &:nth-child(2n) {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
-.tooltip-custom {
+.ant-tooltip-custom {
   .ant-tooltip-content {
     .ant-tooltip-inner {
       background-color: #6152ed;
@@ -442,6 +466,19 @@ h1.ant-typography {
       padding: 8px 14px;
     }
   }
+
+  &.ant-tooltip-placement-bottom {
+    .ant-tooltip-arrow {
+      top: 2px !important;
+    }
+  }
+
+  &.ant-tooltip-placement-top {
+    .ant-tooltip-arrow {
+      bottom: 2px !important;
+    }
+  }
+
   .ant-tooltip-arrow {
     &::before,
     &::after {
@@ -472,6 +509,12 @@ h1.ant-typography {
 .mt {
   &-60 {
     margin-top: 60px;
+  }
+}
+
+.mb {
+  &-12 {
+    margin-bottom: 12px;
   }
 }
 
@@ -508,7 +551,7 @@ h2.ant-typography {
 }
 
 // notice
-.notice {
+.start {
   > img {
     position: absolute;
     top: 0;
@@ -531,20 +574,15 @@ h2.ant-typography {
 
 // evaluation
 .evaluation {
-  > .ant-flex {
+  .notice {
     padding: 16px;
     border-radius: 12px;
     background-color: #f4f7fd;
-  }
 
-  > .ant-typography {
-    margin-bottom: 12px;
-  }
-
-  .text {
     color: #333;
     font-size: 14px;
     word-break: keep-all;
+    font-weight: 500;
 
     b {
       font-weight: bold;
@@ -552,6 +590,10 @@ h2.ant-typography {
 
     span {
       color: #6152ed;
+    }
+
+    .underline {
+      border-bottom: 1px solid #6152ed;
     }
   }
 
@@ -591,6 +633,50 @@ h2.ant-typography {
         resize: none;
         height: 100px;
       }
+
+      &-row {
+        display: block;
+
+        label {
+          font-size: 16px;
+          font-weight: 600;
+          color: #24acf0;
+        }
+      }
+    }
+  }
+}
+
+.taste-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #f24f78;
+  padding: 4px 8px;
+  border: 1px solid;
+  border-radius: 20px;
+  border-color: #f24f78;
+  line-height: 18px;
+
+  &.after {
+    color: #6152ed;
+    border-color: #6152ed;
+  }
+}
+
+.inner {
+  position: relative;
+
+  & + .inner {
+    padding-top: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      height: 10px;
+      background-color: #f7f7f7;
     }
   }
 }

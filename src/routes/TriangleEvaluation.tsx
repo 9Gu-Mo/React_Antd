@@ -7,6 +7,7 @@ import { useState } from "react";
 // component
 import BottomFixButton from "../components/common/BottomFixButton";
 import Title from "antd/es/typography/Title";
+import Notice from "../components/common/Notice";
 
 export default function TriangleEvaluation() {
   const [valueOutlined, setValueOutlined] = useState();
@@ -21,9 +22,8 @@ export default function TriangleEvaluation() {
   return (
     <>
       <div className="evaluation">
-        <Flex gap={12} align="center">
-          <img src="/icon-excl-mark.svg" alt="" />
-          <div className="text">
+        <Notice>
+          <div>
             <b>슈가맨</b>님! <br />
             먼저 입을 헹군 후에 화면에
             <b>
@@ -31,7 +31,7 @@ export default function TriangleEvaluation() {
             </b>
             해 주세요.
           </div>
-        </Flex>
+        </Notice>
 
         <div className="content">
           <Space direction="vertical">

@@ -1,21 +1,31 @@
 import { Slider, Typography, type SliderSingleProps } from "antd";
 import { useState } from "react";
 
-export default function SliderFiveStep() {
+export default function SliderFiftenStep() {
   // 5단계
   const marksFiveStep: SliderSingleProps["marks"] = {
-    0: "전혀 차이 없음",
-    25: "약간의 차이",
-    50: "중간 정도 차이",
-    75: "상단한 차이",
-    100: "극단적인 차이",
+    0: "1",
+    7: "2",
+    14: "3",
+    21: "4",
+    29: "5",
+    36: "6",
+    43: "7",
+    50: "8",
+    57: "9",
+    64: "10",
+    71: "11",
+    79: "12",
+    86: "13",
+    93: "14",
+    100: "15",
   };
 
   const [sliderValue, setSliderValue] = useState<number>(0);
 
   return (
     <>
-      <div className="slider-wrap">
+      <div className="slider-wrap slider-fifteen">
         <Typography>{marksFiveStep[sliderValue] as string}</Typography>
         <Slider
           marks={marksFiveStep}

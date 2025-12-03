@@ -5,13 +5,13 @@ import BottomFixButton from "../components/common/BottomFixButton";
 
 const { Text } = Typography;
 
-export default function Notice() {
+export default function Start() {
   return (
     <>
-      <div className="notice">
+      <div className="start">
         <img src="/bg.png" alt="안내 배경 이미지" />
 
-        <div className="notice-inner">
+        <div className="start-inner">
           <Title level={3}>안녕하세요</Title>
           <Text>
             테스트에 앞서 물을 준비해주세요.
