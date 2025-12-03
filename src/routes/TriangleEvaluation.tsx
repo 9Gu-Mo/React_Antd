@@ -1,11 +1,12 @@
 // lib
-import { Button, Flex, Radio, type RadioChangeEvent } from "antd";
+import { Button, Flex, Radio, Space, Typography, type RadioChangeEvent } from "antd";
 
 // hook
 import { useState } from "react";
 
 // component
 import BottomFixButton from "../components/common/BottomFixButton";
+import Title from "antd/es/typography/Title";
 
 export default function TriangleEvaluation() {
   const [valueOutlined, setValueOutlined] = useState();
@@ -33,11 +34,15 @@ export default function TriangleEvaluation() {
         </Flex>
 
         <div className="content">
-          <Flex>
-            <em>Q.</em>
-          </Flex>
-          <b>3개 샘플 중 다른 하나가 무엇인지 선택해주세요.</b>
-          <p>(3개 중 2개가 동일하며, 나머지 1개가 다릅니다.)</p>
+          <Space direction="vertical">
+            <Flex>
+              <em>Q.</em>
+            </Flex>
+            <Flex vertical gap={4}>
+              <Title level={4}>3개 샘플 중 다른 하나가 무엇인지 선택해주세요.</Title>
+              <Typography>(3개 중 2개가 동일하며, 나머지 1개가 다릅니다.)</Typography>
+            </Flex>
+          </Space>
           <Radio.Group
             className="rdo-button"
             block

@@ -1,9 +1,11 @@
 // lib
-import { Button, Flex, Typography } from "antd";
+import { Button, Flex, Space, Typography } from "antd";
 
 // component
 import BottomFixButton from "../components/common/BottomFixButton";
 import SliderFiveStep from "../components/common/SliderFiveStep";
+import TextArea from "antd/es/input/TextArea";
+import Title from "antd/es/typography/Title";
 
 export default function DodEvaluation() {
   return (
@@ -23,20 +25,28 @@ export default function DodEvaluation() {
         </Flex>
 
         <div className="content">
-          <Flex>
-            <em>Q.</em>
-          </Flex>
-          <b>시식한 472샘플이 Control과 비교하여 얼마나 다른지 평가해주세요.</b>
+          <Space direction="vertical">
+            <Flex>
+              <em>Q.</em>
+            </Flex>
+            <Flex vertical gap={4}>
+              <Title level={4}>시식한 472샘플이 Control과 비교하여 얼마나 다른지 평가해주세요.</Title>
+            </Flex>
+          </Space>
           <SliderFiveStep />
         </div>
 
-        {/* <div className="content">
-          <Flex>
-            <em>Q.</em>
-          </Flex>
-          <b>평가하신 구체적인 이유와 차이를 느낀 부분을 자유롭게 작성해 주세요.</b>
-          <TextArea />
-        </div> */}
+        <div className="content">
+          <Space direction="vertical">
+            <Flex>
+              <em>Q.</em>
+            </Flex>
+            <Flex vertical gap={4}>
+              <Title level={4}>평가하신 구체적인 이유와 차이를 느낀 부분을 자유롭게 작성해 주세요.</Title>
+            </Flex>
+          </Space>
+          <TextArea size="large" placeholder="이 곳에 작성해주세요" />
+        </div>
       </div>
       <BottomFixButton text="다음" type="primary" disabled>
         <Button>이전</Button>

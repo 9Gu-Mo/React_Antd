@@ -52,7 +52,8 @@ export const antdTheme: ThemeConfig = {
       fontSizeHeading1: 48,
       fontSizeHeading2: 32,
       fontSizeHeading3: 20,
-      fontSizeHeading4: 16,
+      fontSizeHeading4: 18,
+      fontSizeHeading5: 16,
 
       // title font color
       colorTextHeading: "#222222",

@@ -1,4 +1,5 @@
 import { Slider, Typography, type SliderSingleProps } from "antd";
+import { useState } from "react";
 
 export default function SliderFiveStep() {
   // 5단계
@@ -10,13 +11,16 @@ export default function SliderFiveStep() {
     100: "극단적인 차이",
   };
 
+  const [sliderValue, setSliderValue] = useState<number>(0);
+
   return (
     <>
       <div className="slider-wrap">
-        <Typography>전혀 차이 없음</Typography>
+        <Typography>{marksFiveStep[sliderValue] as string}</Typography>
         <Slider
           marks={marksFiveStep}
           step={null}
+          onChange={(value) => setSliderValue(value)}
           tooltip={{
             formatter: (value) => marksFiveStep[value as number] as string,
             open: true,
