@@ -16,9 +16,9 @@ export default function App() {
     <>
       <Flex className="wrap" vertical>
         {isInfoPage || isNoticePage ? "" : <Header />}
-        <main>
+        <Flex className="main" gap={40} vertical>
           <Outlet />
-        </main>
+        </Flex>
       </Flex>
     </>
   );

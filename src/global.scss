@@ -5,6 +5,11 @@ html {
   font-family: "Pretendard", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .wrap {
   position: relative;
   min-height: 100dvh;
@@ -15,12 +20,18 @@ html {
   padding: 80px 0 48px;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
+  background-color: red;
 
-  > main {
-    height: calc(100vh - 80px - 48px);
-    display: flex;
-    flex-direction: column;
+  .main {
+    min-height: calc(100vh - 80px - 48px);
     padding: 0 20px;
+    background-color: blue;
+
+    > * {
+      &:first-child {
+        flex: 1 1 0%;
+      }
+    }
   }
 }
 
@@ -232,9 +243,6 @@ h1.ant-typography {
 }
 
 .bottom-fix {
-  width: 100%;
-  padding: 20px 0;
-
   > button {
     height: 56px;
     border-radius: 12px;
@@ -527,8 +535,6 @@ h2.ant-typography {
 
 // evaluation
 .evaluation {
-  flex: 1 1 0%;
-
   > .ant-flex {
     padding: 16px;
     border-radius: 12px;

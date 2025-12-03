@@ -4,7 +4,6 @@ import { Button, Flex, Typography } from "antd";
 // component
 import BottomFixButton from "../components/common/BottomFixButton";
 import SliderFiveStep from "../components/common/SliderFiveStep";
-import TextArea from "antd/es/input/TextArea";
 
 export default function DodEvaluation() {
   return (
@@ -31,13 +30,13 @@ export default function DodEvaluation() {
           <SliderFiveStep />
         </div>
 
-        <div className="content">
+        {/* <div className="content">
           <Flex>
             <em>Q.</em>
           </Flex>
           <b>평가하신 구체적인 이유와 차이를 느낀 부분을 자유롭게 작성해 주세요.</b>
           <TextArea />
-        </div>
+        </div> */}
       </div>
       <BottomFixButton text="다음" type="primary" disabled>
         <Button>이전</Button>
