@@ -12,16 +12,16 @@ export default function Info() {
   return (
     <>
       <div className="info">
-        <Title level={3} className="ft-cl-light-gray">
+        <Title level={3} className="ft-cl-light-gray ft-al-cn">
           Code <span className="ft-cl-primary">AB206</span>
         </Title>
-        <Title level={2} className="product">
+        <Title level={2} className="product ft-al-cn">
           신제품 개발
           <br />
           Spicy Mandu
         </Title>
-        <Text>Spicy Ingredient (A, B, C)</Text>
-        <AntdInput classNmae="mt-60" placeholder="닉네임을 입력해 주세요" label="닉네임" />
+        <Text className="ft-al-cn">Spicy Ingredient (A, B, C)</Text>
+        <AntdInput classNmae="mt-60" placeholder="이름을 입력해 주세요" label="이름" />
       </div>
       <BottomFixButton text="설문 시작" type="primary" />
     </>

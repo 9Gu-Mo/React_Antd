@@ -9,13 +9,13 @@ export default function App() {
   const location = useLocation();
 
   // url로 header 노출 페이지 제어
-  const isInfoPage = location.pathname === "/info"; // 사용자 정보 입력
-  const isNoticePage = location.pathname === "/notice"; // 안내
+  const isInfo = location.pathname === "/info"; // 사용자 정보 입력
+  const isHome = location.pathname === "/"; // 사용자로그인
 
   return (
     <>
       <Flex className="wrap" vertical>
-        {isInfoPage || isNoticePage ? "" : <Header />}
+        {isInfo || isHome ? "" : <Header />}
         <Flex className="main" gap={40} vertical>
           <Outlet />
         </Flex>

@@ -488,21 +488,29 @@ h1.ant-typography {
 }
 
 // common
-.ft-cl {
-  &-light-gray {
-    color: #aaa !important;
+.ft {
+  &-cl {
+    &-light-gray {
+      color: #aaa !important;
+    }
+
+    &-gray {
+      color: #555;
+    }
+
+    &-dark {
+      color: #222;
+    }
+
+    &-primary {
+      color: #6152ed;
+    }
   }
 
-  &-gray {
-    color: #555;
-  }
-
-  &-dark {
-    color: #222;
-  }
-
-  &-primary {
-    color: #6152ed;
+  &-al {
+    &-cn {
+      text-align: center;
+    }
   }
 }
 
@@ -518,6 +526,40 @@ h1.ant-typography {
   }
 }
 
+// login
+.login {
+  > div {
+    flex: 1 1 0%;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .ant-row {
+    display: block;
+
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+
+  > button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+
+    em {
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+    }
+  }
+}
+
 // info
 .info {
   strong {
@@ -529,13 +571,16 @@ h1.ant-typography {
       font-style: normal;
     }
   }
-}
 
-.ant-input-wrap {
-  height: 48px;
+  .ant-input-wrap {
+    .ant-row {
+      display: block;
+    }
 
-  .ant-row {
-    display: block;
+    label {
+      font-weight: 500;
+      font-size: 16px;
+    }
   }
 }
 
@@ -550,7 +595,7 @@ h2.ant-typography {
   }
 }
 
-// notice
+// start
 .start {
   > img {
     position: absolute;

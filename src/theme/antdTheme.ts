@@ -38,12 +38,13 @@ export const antdTheme: ThemeConfig = {
     Input: {
       borderRadius: 12,
       colorBgContainer: "#fff",
-      colorBorder: "#ddd",
+      colorBorder: "#d3d3d3",
       activeBorderColor: "#1e88e5",
       hoverBg: "#fff",
       hoverBorderColor: "#ddd",
       colorTextPlaceholder: "#999",
       controlHeight: 48,
+      fontSize: 16,
     },
 
     // Typography
