@@ -12,7 +12,7 @@ body {
 
 .wrap {
   position: relative;
-  min-height: 100dvh;
+  max-height: 100dvh;
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: env(safe-area-inset-bottom);
