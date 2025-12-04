@@ -23,7 +23,6 @@ export default function SliderFiveStep() {
           onChange={(value) => setSliderValue(value)}
           tooltip={{
             formatter: (value) => marksFiveStep[value as number] as string,
-            open: true,
             rootClassName: "ant-tooltip-custom",
           }}
         />

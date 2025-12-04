@@ -17,10 +17,8 @@ export default function CQEvaluation() {
           <Typography className="mb-12">샘플에 대한 ‘기호도’ 및 ‘맛의 강도’의 평가를 위한 항목이예요.</Typography>
           <Notice>
             <div>
-              <b>슈가맨</b>님! <br />본 평가는
-              <b>
-                <span>시식 전/후 2단계로 진행</span>
-              </b>
+              다음 질문은
+              <span>시식 전/후 2단계로 진행</span>
               됩니다.
               <b>
                 <span className="underline">시식하기 전</span>

@@ -15,7 +15,6 @@ export default function DodEvaluation() {
         <Typography className="mb-12">제공된 샘플 간의 감각적 차이 정도를 평가를 위한 항목이예요.</Typography>
         <Notice>
           <div>
-            <b>슈가맨</b>님! <br />
             먼저 입을 헹군 후에
             <b>
               <span>Control과 472샘플을 차례</span>

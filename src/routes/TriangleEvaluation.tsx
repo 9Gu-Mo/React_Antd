@@ -24,7 +24,6 @@ export default function TriangleEvaluation() {
       <div className="evaluation">
         <Notice>
           <div>
-            <b>슈가맨</b>님! <br />
             먼저 입을 헹군 후에 화면에
             <b>
               표시된 순서대로 <span>왼쪽부터 샘플을 시식</span>
