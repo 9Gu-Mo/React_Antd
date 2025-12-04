@@ -1,6 +1,7 @@
 import { Button, Flex } from "antd";
 import type { ReactNode } from "react";
 import type { ButtonProps } from "antd";
+import type { MouseEventHandler } from "react";
 
 interface Props {
   text?: ReactNode;
@@ -11,6 +12,7 @@ interface Props {
   className?: string;
   children?: ReactNode;
   disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function BottomFixButton(props: Props) {
@@ -26,6 +28,7 @@ export default function BottomFixButton(props: Props) {
           color={props.color}
           htmlType={props.htmlType}
           disabled={props.disabled}
+          onClick={props.onClick}
         >
           {props.text}
         </Button>

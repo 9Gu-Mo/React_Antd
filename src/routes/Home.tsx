@@ -1,5 +1,5 @@
 // lib
-import { Flex, Form, Input, Modal, Radio, type RadioChangeEvent } from "antd";
+import { Flex, Form, Input, Radio, type RadioChangeEvent } from "antd";
 import Typography from "antd/es/typography/Typography";
 
 // hook
@@ -10,6 +10,7 @@ import BottomFixButton from "../components/common/BottomFixButton";
 import IconGlobal from "../components/Icon/IconGlobal";
 import IconArrowDown from "../components/Icon/IconArrowDown";
 import BottomModal from "../components/common/modal/BottomModal";
+import AlertModal from "../components/common/modal/AlertModal";
 
 // root
 export default function Home() {
@@ -77,17 +78,17 @@ export default function Home() {
           />
         </BottomModal>
       </Flex>
-      <button type="button" onClick={modalOpen}>
-        확인
-      </button>
-      <Modal
-        title="ss"
-        open={alert}
+      <AlertModal
         onOk={() => {
           setAlert(false);
         }}
-      ></Modal>
-      <BottomFixButton text="확인" type="primary" />
+        open={alert}
+      >
+        유효하지 않은 코드 입니다.
+        <br />
+        확인 후 다시 입력해 주세요.
+      </AlertModal>
+      <BottomFixButton text="확인" type="primary" onClick={modalOpen} />
     </>
   );
 }
