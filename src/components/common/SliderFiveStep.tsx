@@ -19,7 +19,6 @@ export default function SliderFiveStep() {
       <div className="slider-wrap">
         <Typography>{marksFiveStep[sliderValue] as string}</Typography>
         <div
-          className="test"
           onPointerDown={() => setTooltipOpen(true)} // 터치/마우스 모두 대응
           onPointerUp={() => setTooltipOpen(false)}
         >
