@@ -12,20 +12,16 @@ body {
 
 .wrap {
   position: relative;
-  // min-height: calc(100dvh - 48px);
   min-height: 100dvh;
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: env(safe-area-inset-bottom);
   padding-top: env(safe-area-inset-top);
   padding: 80px 0 48px;
-  // background-color: seagreen;
 
   .main {
-    // min-height: calc(100vh - 80px - 48px);
     flex: 1;
     padding: 0 20px;
-    // background-color: #1677ff;
 
     > * {
       &:first-child {
@@ -530,6 +526,69 @@ h1.ant-typography {
   }
 }
 
+// modal
+.ant-drawer-content-wrapper {
+  &:has(.modal-bottom) {
+    box-shadow: none;
+  }
+}
+
+.modal-bottom {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  .ant {
+    &-drawer {
+      &-header {
+        border-bottom: none;
+        padding: 12px 24px;
+        &-title {
+          flex-direction: row-reverse;
+        }
+      }
+      &-title {
+        font-size: 18px;
+        color: #000;
+      }
+      &-body {
+        padding: 8px 24px 48px;
+      }
+      &-close {
+        margin-inline-end: 0 !important;
+      }
+    }
+    &-radio {
+      &-group {
+        flex-direction: column;
+      }
+      &-button {
+        &-wrapper {
+          border: none;
+          text-align: left;
+          padding: 12px 16px;
+          border-radius: 12px;
+          box-sizing: border-box;
+          transition: none;
+          &-checked {
+            background: #f1efff url(../public/icon-check-purple.svg) no-repeat calc(100% - 16px) center !important;
+            border-color: #f1efff !important;
+          }
+        }
+        &-label {
+          font-size: 20px;
+          font-weight: 400;
+          color: #000;
+        }
+        &-checked {
+          & + .ant-radio-button-label {
+            color: #6152ed;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
 // login
 .login {
   > div {
@@ -540,13 +599,17 @@ h1.ant-typography {
     width: 160px;
   }
 
-  .ant-row {
-    display: block;
+  .ant {
+    &-col {
+      margin-bottom: 8px;
+    }
 
-    label {
-      font-size: 16px;
-      font-weight: 500;
-      color: #000;
+    &-row {
+      label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+      }
     }
   }
 

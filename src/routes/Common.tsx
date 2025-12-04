@@ -7,6 +7,7 @@ import AntdSelect from "../components/common/AntdSelect";
 import AntdSlider from "../components/common/AntdSlider";
 import AntdSteps from "../components/common/AntdSteps";
 import AntdTable from "../components/common/AntdTable";
+import DndEx from "../components/common/DndEx";
 import TableCoales from "../components/common/TableCoales";
 import TableSeparation from "../components/common/TableSeparation";
 
@@ -24,6 +25,7 @@ export default function Common() {
       <TableSeparation />
       <TableCoales />
       <AntdSlider />
+      <DndEx />
       <div style={{ height: "500px" }}></div>
     </>
   );

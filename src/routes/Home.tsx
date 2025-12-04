@@ -1,23 +1,32 @@
-import { Flex, Form, Input } from "antd";
-import type { OTPProps } from "antd/es/input/OTP";
+// lib
+import { Flex, Form, Input, Modal, Radio, type RadioChangeEvent } from "antd";
 import Typography from "antd/es/typography/Typography";
+
+// hook
+import { useState } from "react";
+
+// component
 import BottomFixButton from "../components/common/BottomFixButton";
 import IconGlobal from "../components/Icon/IconGlobal";
 import IconArrowDown from "../components/Icon/IconArrowDown";
+import BottomModal from "../components/common/modal/BottomModal";
 
 // root
 export default function Home() {
-  const onChange: OTPProps["onChange"] = (text) => {
-    console.log("onChange:", text);
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+  const [alert, setAlert] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
   };
 
-  const onInput: OTPProps["onInput"] = (value) => {
-    console.log("onInput:", value);
+  const onChange = (e: RadioChangeEvent) => {
+    setValue(e.target.value);
   };
 
-  const sharedProps: OTPProps = {
-    onChange,
-    onInput,
+  const modalOpen = () => {
+    setAlert(!alert);
   };
 
   return (
@@ -29,19 +38,55 @@ export default function Home() {
           </div>
           <Typography>설문 담당자에게 전달받은 코드를 입력해주세요.</Typography>
 
-          <Form.Item label="코드" className="mt-60">
-            <Input.OTP length={5} formatter={(str) => str.toUpperCase()} {...sharedProps} />
-          </Form.Item>
+          <Form layout="vertical">
+            <Form.Item label="코드" className="mt-60">
+              <Input.OTP length={5} formatter={(str) => str.toUpperCase()} />
+            </Form.Item>
+          </Form>
         </div>
 
-        <button type="button">
+        <button type="button" onClick={handleOpen}>
           <Flex align="center" gap={4}>
             <IconGlobal />
             <em>KR</em>
           </Flex>
           <IconArrowDown />
         </button>
+
+        <BottomModal
+          title="언어 변경"
+          open={open}
+          placement="bottom"
+          onClose={() => {
+            setOpen(false);
+          }}
+          height={332}
+        >
+          <Radio.Group
+            value={value}
+            onChange={onChange}
+            block
+            optionType="button"
+            buttonStyle="solid"
+            options={[
+              { value: "EN", label: "EN" },
+              { value: "CN", label: "CN" },
+              { value: "JP", label: "JP" },
+              { value: "VN", label: "VN" },
+            ]}
+          />
+        </BottomModal>
       </Flex>
+      <button type="button" onClick={modalOpen}>
+        확인
+      </button>
+      <Modal
+        title="ss"
+        open={alert}
+        onOk={() => {
+          setAlert(false);
+        }}
+      ></Modal>
       <BottomFixButton text="확인" type="primary" />
     </>
   );
