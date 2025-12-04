@@ -12,31 +12,23 @@ export default function SliderFiveStep() {
   };
 
   const [sliderValue, setSliderValue] = useState<number>(0);
-  const [tooltipOpen, setTooltipOpen] = useState(false);
+  // const [tooltipOpen, setTooltipOpen] = useState(false);
 
   return (
     <>
       <div className="slider-wrap">
         <Typography>{marksFiveStep[sliderValue] as string}</Typography>
-        <div
-          onTouchStart={() => setTooltipOpen(true)}
-          onTouchEnd={() => setTooltipOpen(false)}
-          onMouseDown={() => setTooltipOpen(true)}
-          onMouseUp={() => setTooltipOpen(false)}
-          className="test"
-        >
-          <Slider
-            marks={marksFiveStep}
-            step={null}
-            value={sliderValue}
-            onChange={(value) => setSliderValue(value)}
-            tooltip={{
-              open: tooltipOpen,
-              formatter: (value) => marksFiveStep[value as number] as string,
-              rootClassName: "ant-tooltip-custom",
-            }}
-          />
-        </div>
+        <Slider
+          marks={marksFiveStep}
+          step={null}
+          value={sliderValue}
+          onChange={(value) => setSliderValue(value)}
+          tooltip={{
+            // open: tooltipOpen
+            formatter: (value) => marksFiveStep[value as number] as string,
+            rootClassName: "ant-tooltip-custom",
+          }}
+        />
       </div>
     </>
   );
