@@ -12,7 +12,6 @@ export default function SliderFiveStep() {
   };
 
   const [sliderValue, setSliderValue] = useState<number>(0);
-  const [tooltipOpen, setTooltipOpen] = useState(false);
 
   return (
     <>
@@ -21,14 +20,10 @@ export default function SliderFiveStep() {
         <Slider
           marks={marksFiveStep}
           step={null}
-          value={sliderValue}
           onChange={(value) => setSliderValue(value)}
-          onChangeComplete={() => setTooltipOpen(false)} // 드래그 끝나면 숨김
           tooltip={{
-            // formatter: (value) => marksFiveStep[value as number] as string,
-            // rootClassName: "ant-tooltip-custom",
-            open: tooltipOpen,
             formatter: (value) => marksFiveStep[value as number] as string,
+            rootClassName: "ant-tooltip-custom",
           }}
         />
       </div>
