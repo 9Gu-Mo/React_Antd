@@ -37,6 +37,7 @@ export default function SliderFiveStep() {
             open: tooltipOpen,
             formatter: (value) => marksFiveStep[value as number] as string,
             rootClassName: "ant-tooltip-custom",
+            placement: "top",
           }}
         />
       </div>
