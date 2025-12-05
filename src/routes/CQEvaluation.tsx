@@ -110,10 +110,10 @@ export default function CQEvaluation() {
               </Flex>
             </Space>
             <Form.Item label="좋은점">
-              <TextArea placeholder="이 곳에 작성해주세요" />
+              <TextArea className="ant-input-textarea" placeholder="이 곳에 작성해주세요" />
             </Form.Item>
             <Form.Item label="개선 할 점">
-              <TextArea placeholder="이 곳에 작성해주세요" />
+              <TextArea className="ant-input-textarea" placeholder="이 곳에 작성해주세요" />
             </Form.Item>
           </div>
         </div>

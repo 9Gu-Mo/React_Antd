@@ -1,14 +1,30 @@
 import { Slider, Typography, type SliderSingleProps } from "antd";
 import { useState } from "react";
 
-export default function SliderFiveStep() {
-  // 5단계
-  const marksFiveStep: SliderSingleProps["marks"] = {
-    0: "전혀 차이 없음",
-    25: "약간의 차이",
-    50: "중간 정도 차이",
-    75: "상단한 차이",
-    100: "극단적인 차이",
+export default function SliderNineStep() {
+  // 9단계
+  const marksNineStep: SliderSingleProps["marks"] = {
+    0: "Weak",
+    13: " ",
+    25: " ",
+    38: " ",
+    50: "Control",
+    63: " ",
+    75: " ",
+    88: " ",
+    100: "Strong",
+  };
+
+  const displayTexts: Record<number, string> = {
+    0: "마늘향",
+    13: "마늘향1",
+    25: "마늘향2",
+    38: "마늘향3",
+    50: "마늘향4",
+    63: "마늘향5",
+    75: "마늘향6",
+    88: "마늘향7",
+    100: "마늘향8",
   };
 
   const [sliderValue, setSliderValue] = useState<number>(0);
@@ -26,15 +42,15 @@ export default function SliderFiveStep() {
   return (
     <>
       <div className="slider-wrap">
-        <Typography>{marksFiveStep[sliderValue] as string}</Typography>
+        <Typography>{displayTexts[sliderValue]}</Typography>
         <Slider
-          marks={marksFiveStep}
+          marks={marksNineStep}
           step={null}
           value={sliderValue}
           onChange={handleChange}
           tooltip={{
             open: tooltipOpen,
-            formatter: (value) => marksFiveStep[value as number] as string,
+            formatter: (value) => displayTexts[value as number] as string,
             rootClassName: "ant-tooltip-custom",
             placement: "top",
           }}

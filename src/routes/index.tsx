@@ -8,6 +8,8 @@ import TriangleEvaluation from "./TriangleEvaluation";
 import DodEvaluation from "./DodEvaluation";
 import CQEvaluation from "./CQEvaluation";
 import Start from "./Start";
+import DodEvaluation2 from "./DodEvaluation2";
+import DodEvaluation3 from "./DodEvaluation3";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +21,8 @@ export const router = createBrowserRouter([
       { path: "start", element: <Start /> }, // 시작 전 안내
       { path: "triangle", element: <TriangleEvaluation /> }, // triangle
       { path: "dod", element: <DodEvaluation /> }, // dod
+      { path: "dod2", element: <DodEvaluation2 /> }, // dod2
+      { path: "dod3", element: <DodEvaluation3 /> }, // dod2
       { path: "cqe", element: <CQEvaluation /> }, // cqe(사내 품질 평가)
       { path: "common", element: <Common /> }, // 공통
       { path: "*", element: <NotFound /> }, // 404

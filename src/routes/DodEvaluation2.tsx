@@ -1,15 +1,14 @@
 // lib
-import { Button, Flex, Radio, Space, Typography, type RadioChangeEvent } from "antd";
-
-// hook
-import { useState } from "react";
+import { Button, Flex, Radio, Space, type RadioChangeEvent } from "antd";
+import Title from "antd/es/typography/Title";
 
 // component
 import BottomFixButton from "../components/common/BottomFixButton";
-import Title from "antd/es/typography/Title";
 import Notice from "../components/common/Notice";
+import { useState } from "react";
+import TextArea from "antd/es/input/TextArea";
 
-export default function TriangleEvaluation() {
+export default function DodEvaluation2() {
   const [valueOutlined, setValueOutlined] = useState();
 
   const onChangeOutlined = (e: RadioChangeEvent) => {
@@ -23,9 +22,9 @@ export default function TriangleEvaluation() {
       <div className="evaluation">
         <Notice>
           <div>
-            먼저 입을 헹군 후에 화면에
+            먼저 입을 헹군 후에 화면에 <b>표시된 순서대로</b>
             <b>
-              표시된 순서대로 <span>왼쪽부터 샘플을 시식</span>
+              <span>왼쪽부터 샘플을 시식</span>
             </b>
             해 주세요.
           </div>
@@ -37,8 +36,7 @@ export default function TriangleEvaluation() {
               <em>Q.</em>
             </Flex>
             <Flex vertical gap={4}>
-              <Title level={4}>3개 샘플 중 다른 하나가 무엇인지 선택해주세요.</Title>
-              <Typography>(3개 중 2개가 동일하며, 나머지 1개가 다릅니다.)</Typography>
+              <Title level={4}>두가지 제품 중 더 선호하는 샘플을 선택해 주세요.</Title>
             </Flex>
           </Space>
           <Radio.Group
@@ -50,12 +48,23 @@ export default function TriangleEvaluation() {
             options={[
               { value: "472", label: "472" },
               { value: "195", label: "195" },
-              { value: "218", label: "218" },
             ]}
           />
         </div>
+
+        <div className="content">
+          <Space direction="vertical">
+            <Flex>
+              <em>Q.</em>
+            </Flex>
+            <Flex vertical gap={4}>
+              <Title level={4}>해당 제품을 더 선호하는 이유가 있다면 작성해 주세요.</Title>
+            </Flex>
+          </Space>
+          <TextArea className="ant-input-textarea" placeholder="이 곳에 작성해주세요" />
+        </div>
       </div>
-      <BottomFixButton text="다음" type="primary" disabled={!valueOutlined}>
+      <BottomFixButton text="다음" type="primary" disabled>
         <Button>이전</Button>
       </BottomFixButton>
     </>

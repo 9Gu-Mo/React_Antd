@@ -290,15 +290,37 @@ h1.ant-typography {
 }
 
 .tbl {
+  margin-top: 8px;
   table {
     width: 100%;
+
+    tr {
+      &:last-child {
+        td {
+          border-bottom: 1px solid #d4d4d4;
+        }
+      }
+    }
+
     th,
     td {
-      border-bottom: 1px solid #000;
-      border-right: 1px solid #000;
+      padding: 6px;
+      font-size: 10px;
+      font-weight: 500;
+      color: #4d4d4d;
+      border-top: 1px solid #d4d4d4;
+      border-right: 1px solid #d4d4d4;
       &:last-child {
-        border-right: 0;
+        border-right: none;
       }
+    }
+
+    th {
+      background-color: #f7f7f7;
+    }
+
+    td {
+      text-align: center;
     }
   }
 }
@@ -419,6 +441,7 @@ h1.ant-typography {
     &-mark {
       &-text {
         width: 50px;
+        height: 22px;
         top: 25px;
 
         &:first-child {
@@ -453,6 +476,20 @@ h1.ant-typography {
           display: none;
         }
       }
+    }
+  }
+
+  & + .slider-wrap {
+    margin-top: 65px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -32px;
+      height: 1px;
+      background-color: #d3d3d3;
     }
   }
 }
@@ -717,6 +754,7 @@ h2.ant-typography {
 .evaluation {
   .notice {
     padding: 16px;
+    margin-bottom: 48px;
     border-radius: 12px;
     background-color: #f4f7fd;
 
@@ -739,8 +777,6 @@ h2.ant-typography {
   }
 
   .content {
-    margin-top: 48px;
-
     & + .content {
       margin-top: 32px;
       padding-top: 32px;
@@ -771,17 +807,19 @@ h2.ant-typography {
       }
 
       &-input {
-        resize: none;
-        height: 100px;
+        &-textarea {
+          resize: none;
+          height: 100px;
+        }
       }
 
       &-row {
         display: block;
 
         label {
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 600;
-          color: #24acf0;
+          color: #000000;
         }
       }
     }
@@ -819,5 +857,37 @@ h2.ant-typography {
       height: 10px;
       background-color: #f7f7f7;
     }
+  }
+}
+
+.dnd {
+  .ant {
+    &-flex {
+      > * {
+        padding: 12px 19px;
+        background-color: #f1efff;
+        color: #6152ed;
+        border-radius: 12px;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+  }
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &-item {
+    padding: 12px 19px;
+    background-color: #f1efff;
+    color: #6152ed;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
   }
 }
