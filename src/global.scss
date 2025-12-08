@@ -893,8 +893,8 @@ h2.ant-typography {
       flex: 0 0 100%;
 
       .dnd-inner {
-        height: 80px;
-        // min-height: 80px;
+        height: auto;
+        min-height: 80px;
         flex-direction: row;
         flex-wrap: wrap;
       }
