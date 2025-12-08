@@ -897,6 +897,11 @@ h2.ant-typography {
         min-height: 80px;
         flex-direction: row;
         flex-wrap: wrap;
+        overflow: hidden;
+      }
+
+      .dnd-item {
+        width: 67px;
       }
     }
   }
@@ -910,16 +915,19 @@ h2.ant-typography {
     padding: 12px;
     flex-direction: column;
     overflow-y: auto;
+
+    & + div {
+      display: none !important;
+    }
   }
 
   &-item {
-    padding: 12px 19px;
+    padding: 12px 15px;
     background-color: #f1efff;
     color: #6152ed;
     border-radius: 12px;
     font-size: 20px;
     font-weight: 500;
     text-align: center;
-    // flex: 1;
   }
 }
