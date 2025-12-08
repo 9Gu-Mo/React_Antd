@@ -76,60 +76,41 @@ export default function DndEx() {
 
   return (
     <>
-      <Flex vertical gap={10} className="dnd">
+      <Flex vertical gap={10}>
         <Title level={2}>Drag And Drop</Title>
         <DragDropContext onDragEnd={onDragEnd}>
-          <div
-            style={{
-              display: "flex",
-              gap: 32,
-              justifyContent: "center",
-            }}
-          >
+          <div className="dnd">
             {(["left", "center", "right"] as const).map((droppableId) => (
               <Droppable key={droppableId} droppableId={droppableId}>
-                {(provided, snapshot) => (
+                {(provided) => (
                   // dnd 영역
-                  <div
-                    ref={provided.innerRef}
-                    {...provided.droppableProps}
-                    style={{
-                      width: 260,
-                      minHeight: 260,
-                      padding: 12,
-                      borderRadius: 8,
-                      background: snapshot.isDraggingOver ? "#e6f7ff" : "#fafafa",
-                      border: "1px solid #ddd",
-                    }}
-                  >
-                    <h4 style={{ textAlign: "center", marginTop: 0 }}>
-                      {droppableId === "left"
-                        ? "왼쪽 리스트"
-                        : droppableId === "center"
-                        ? "가운데 리스트"
-                        : "오른쪽 리스트"}
-                    </h4>
+                  <>
+                    <div ref={provided.innerRef} {...provided.droppableProps} className="dnd-wrap">
+                      <Title level={4}>
+                        {droppableId === "left" ? "평가샘플" : droppableId === "center" ? "A Group" : "B Group"}
+                      </Title>
 
-                    {/* dnd item */}
-                    <div className="dnd-inner">
-                      {lists[droppableId].map((item, index) => (
-                        <Draggable key={item.id} draggableId={item.id} index={index}>
-                          {(provided) => (
-                            <div
-                              ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              className="dnd-item"
-                            >
-                              {item.text}
-                            </div>
-                          )}
-                        </Draggable>
-                      ))}
+                      {/* dnd item */}
+                      <div className="dnd-inner">
+                        {lists[droppableId].map((item, index) => (
+                          <Draggable key={item.id} draggableId={item.id} index={index}>
+                            {(provided) => (
+                              <div
+                                ref={provided.innerRef}
+                                {...provided.draggableProps}
+                                {...provided.dragHandleProps}
+                                className="dnd-item"
+                              >
+                                {item.text}
+                              </div>
+                            )}
+                          </Draggable>
+                        ))}
+                      </div>
+
+                      {provided.placeholder}
                     </div>
-
-                    {provided.placeholder}
-                  </div>
+                  </>
                 )}
               </Droppable>
             ))}
