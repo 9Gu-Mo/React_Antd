@@ -1,42 +1,32 @@
 import { Slider, Typography, type SliderSingleProps } from "antd";
 import { useState } from "react";
 
-export default function SliderFiftenStep() {
-  // 15단계
-  const marksFiveStep: SliderSingleProps["marks"] = {
-    0: "1",
-    7: "2",
-    14: "3",
-    21: "4",
-    29: "5",
-    36: "6",
-    43: "7",
-    50: "8",
-    57: "9",
-    64: "10",
-    71: "11",
-    79: "12",
-    86: "13",
-    93: "14",
-    100: "15",
+export default function SliderTenStep() {
+  // 10단계
+  const marksNineStep: SliderSingleProps["marks"] = {
+    0: "0",
+    11: "1",
+    22: "2",
+    33: "3",
+    44: "4",
+    55: "5",
+    66: "6",
+    77: "7",
+    88: "8",
+    100: "9",
   };
 
   const displayTexts: Record<number, string> = {
     0: "마늘향",
-    7: "마늘향2",
-    14: "마늘향3",
-    21: "마늘향4",
-    29: "마늘향5",
-    36: "마늘향6",
-    43: "마늘향7",
-    50: "마늘향8",
-    57: "마늘향9",
-    64: "마늘향10",
-    71: "마늘향11",
-    79: "마늘향12",
-    86: "마늘향13",
-    93: "마늘향14",
-    100: "마늘향15",
+    11: "마늘향1",
+    22: "마늘향2",
+    33: "마늘향3",
+    44: "마늘향4",
+    55: "마늘향5",
+    66: "마늘향6",
+    77: "마늘향7",
+    88: "마늘향8",
+    100: "마늘향9",
   };
 
   const [sliderValue, setSliderValue] = useState<number>(0);
@@ -53,10 +43,10 @@ export default function SliderFiftenStep() {
 
   return (
     <>
-      <div className="slider-wrap slider-fifteen">
-        <Typography>{displayTexts[sliderValue] as string}</Typography>
+      <div className="slider-wrap">
+        <Typography>{displayTexts[sliderValue]}</Typography>
         <Slider
-          marks={marksFiveStep}
+          marks={marksNineStep}
           step={null}
           value={sliderValue}
           onChange={handleChange}

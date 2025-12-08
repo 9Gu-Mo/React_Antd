@@ -392,7 +392,7 @@ h1.ant-typography {
         width: 32px;
         height: 32px;
         background: url("../public/icon-arrow-both.svg"),
-          linear-gradient(90deg, rgba(97, 82, 237, 1) 0%, rgba(91, 110, 237, 1) 100%);
+          linear-gradient(90deg, rgba(97, 82, 237, 1) 0%, rgba(105, 145, 246, 1) 100%);
         background-repeat: no-repeat;
         background-position: center;
         inset-block-start: -11px;
@@ -456,8 +456,6 @@ h1.ant-typography {
   }
 
   &.slider-fifteen {
-    padding-top: 85px;
-
     .ant-slider-dot {
       width: 2px;
       border-radius: 1px;
@@ -472,9 +470,10 @@ h1.ant-typography {
     .ant-slider-mark {
       &-text {
         width: auto;
-        &:nth-child(2n) {
-          display: none;
-        }
+        font-size: 10px;
+        // &:nth-child(2n) {
+        //   display: none;
+        // }
       }
     }
   }
@@ -560,6 +559,18 @@ h1.ant-typography {
 .mb {
   &-12 {
     margin-bottom: 12px;
+  }
+}
+
+// input
+.ant-input-wrap {
+  .ant-row {
+    display: block;
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 16px;
   }
 }
 
@@ -704,17 +715,6 @@ h1.ant-typography {
       font-style: normal;
     }
   }
-
-  .ant-input-wrap {
-    .ant-row {
-      display: block;
-    }
-
-    label {
-      font-weight: 500;
-      font-size: 16px;
-    }
-  }
 }
 
 h2.ant-typography {
@@ -846,6 +846,7 @@ h2.ant-typography {
   position: relative;
 
   & + .inner {
+    margin-top: 40px;
     padding-top: 50px;
 
     &::before {

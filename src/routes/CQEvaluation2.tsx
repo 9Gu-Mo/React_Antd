@@ -7,10 +7,9 @@ import Title from "antd/es/typography/Title";
 import BottomFixButton from "../components/common/BottomFixButton";
 import TastingLabel from "../components/common/TastingLabel";
 import Notice from "../components/common/Notice";
-import SliderFifteenStep from "../components/common/SliderFifteenStep";
 import SliderFiveStep from "../components/common/SliderFiveStep";
 
-export default function CQEvaluation() {
+export default function CQEvaluation2() {
   return (
     <>
       <div className="evaluation">
@@ -18,7 +17,7 @@ export default function CQEvaluation() {
           <Notice>
             <div>
               다음 질문은
-              <span>시식 전</span>에 응답해 주시기 바라며, 해당하는 항목을 선택해 주시기 바랍니다.
+              <span>시식 후</span>에 응답해 주시기 바라며, 해당하는 항목을 선택해 주시기 바랍니다.
             </div>
           </Notice>
 
@@ -26,10 +25,10 @@ export default function CQEvaluation() {
             <Space direction="vertical">
               <Flex align="center" gap={4}>
                 <em>Q.</em>
-                <TastingLabel />
+                <TastingLabel after />
               </Flex>
               <Flex vertical gap={4}>
-                <Title level={4}>샘플의 짠맛, 단맛, 신맛은 얼마나 좋습니까?</Title>
+                <Title level={4}>샘플은 전반적으로 얼마나 좋습니까?</Title>
               </Flex>
             </Space>
             <SliderFiveStep />
@@ -39,27 +38,18 @@ export default function CQEvaluation() {
             <Space direction="vertical">
               <Flex align="center" gap={4}>
                 <em>Q.</em>
-                <TastingLabel />
               </Flex>
               <Flex vertical gap={4}>
-                <Title level={4}>샘플의 짠맛, 단맛, 신맛은 얼마나 좋습니까?</Title>
+                <Title level={4}>전반기호도를 평가한 이유에 대해서 작성해 주세요.</Title>
               </Flex>
             </Space>
-            <SliderFiveStep />
+            <Form.Item>
+              <TextArea className="ant-input-textarea" placeholder="이 곳에 작성해주세요" />
+            </Form.Item>
           </div>
         </div>
 
         <div className="inner">
-          <Notice>
-            <div>
-              본 문항은
-              <b>
-                <span className="underline">시식 후 평가</span>
-              </b>
-              하는 항목입니다. 먼저 입을 헹군 후에 제품을 시식해주세요.
-            </div>
-          </Notice>
-
           <div className="content">
             <Space direction="vertical">
               <Flex align="center" gap={4}>
@@ -67,27 +57,23 @@ export default function CQEvaluation() {
                 <TastingLabel after />
               </Flex>
               <Flex vertical gap={4}>
-                <Title level={4}>짠맛의 강도는 얼마나 강한가요?</Title>
+                <Title level={4}>샘플의 짠맛, 단맛, 신맛은 얼마나 강합니까?</Title>
               </Flex>
             </Space>
 
-            <SliderFifteenStep />
+            <SliderFiveStep />
           </div>
 
           <div className="content">
             <Space direction="vertical">
               <Flex align="center" gap={4}>
                 <em>Q.</em>
-                <TastingLabel after />
               </Flex>
               <Flex vertical gap={4}>
-                <Title level={4}>좋은 점과 개선할 사항을 자유롭게 적아주세요.</Title>
+                <Title level={4}>개선됐으면 하는 방향이나 문제점에 대해 자유롭게 작성해 주세요.</Title>
               </Flex>
             </Space>
-            <Form.Item label="좋은점">
-              <TextArea className="ant-input-textarea" placeholder="이 곳에 작성해주세요" />
-            </Form.Item>
-            <Form.Item label="개선 할 점">
+            <Form.Item>
               <TextArea className="ant-input-textarea" placeholder="이 곳에 작성해주세요" />
             </Form.Item>
           </div>

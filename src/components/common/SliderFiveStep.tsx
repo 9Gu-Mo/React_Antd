@@ -4,6 +4,14 @@ import { useState } from "react";
 export default function SliderFiveStep() {
   // 5단계
   const marksFiveStep: SliderSingleProps["marks"] = {
+    0: "1",
+    25: "2",
+    50: "3",
+    75: "4",
+    100: "5",
+  };
+
+  const displayTexts: Record<number, string> = {
     0: "전혀 차이 없음",
     25: "약간의 차이",
     50: "중간 정도 차이",
@@ -26,7 +34,7 @@ export default function SliderFiveStep() {
   return (
     <>
       <div className="slider-wrap">
-        <Typography>{marksFiveStep[sliderValue] as string}</Typography>
+        <Typography>{displayTexts[sliderValue] as string}</Typography>
         <Slider
           marks={marksFiveStep}
           step={null}
@@ -34,7 +42,7 @@ export default function SliderFiveStep() {
           onChange={handleChange}
           tooltip={{
             open: tooltipOpen,
-            formatter: (value) => marksFiveStep[value as number] as string,
+            formatter: (value) => displayTexts[value as number] as string,
             rootClassName: "ant-tooltip-custom",
             placement: "top",
           }}
