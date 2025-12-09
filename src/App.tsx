@@ -16,8 +16,14 @@ export default function App() {
     <>
       <Flex className="wrap" vertical>
         {isInfo || isHome ? "" : <Header />}
-        <Flex className="main" gap={40} vertical>
-          <Outlet />
+        <Flex className="main" vertical>
+          <div>
+            <div>
+              <div className="kanal">
+                <Outlet />
+              </div>
+            </div>
+          </div>
         </Flex>
       </Flex>
     </>
