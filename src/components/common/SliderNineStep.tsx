@@ -1,5 +1,5 @@
 import { Slider, Typography, type SliderSingleProps } from "antd";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function SliderNineStep() {
   // 9단계
@@ -29,20 +29,26 @@ export default function SliderNineStep() {
 
   const [sliderValue, setSliderValue] = useState<number>(0);
   const [tooltipOpen, setTooltipOpen] = useState(false);
+  const timeRef = useRef<number | null>(null);
 
   const handleChange = (value: number) => {
     setSliderValue(value);
     setTooltipOpen(true);
 
-    setTimeout(() => {
+    if (timeRef.current) {
+      clearTimeout(timeRef.current);
+    }
+
+    timeRef.current = setTimeout(() => {
       setTooltipOpen(false);
+      timeRef.current = null;
     }, 1000);
   };
 
   return (
     <>
       <div className="slider-wrap">
-        {sliderValue === 0 ? "" : <Typography>{displayTexts[sliderValue]}</Typography>}
+        <Typography>{displayTexts[sliderValue]}</Typography>
         <Slider
           marks={marksNineStep}
           step={null}

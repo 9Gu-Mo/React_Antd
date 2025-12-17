@@ -1,5 +1,5 @@
 import { Slider, Typography, type SliderSingleProps } from "antd";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function SliderFiveStep() {
   // 5단계
@@ -21,13 +21,19 @@ export default function SliderFiveStep() {
 
   const [sliderValue, setSliderValue] = useState<number>(0);
   const [tooltipOpen, setTooltipOpen] = useState(false);
+  const timeRef = useRef<number | null>(null);
 
   const handleChange = (value: number) => {
     setSliderValue(value);
     setTooltipOpen(true);
 
-    setTimeout(() => {
+    if (timeRef.current) {
+      clearTimeout(timeRef.current);
+    }
+
+    timeRef.current = setTimeout(() => {
       setTooltipOpen(false);
+      timeRef.current = null;
     }, 1000);
   };
 
