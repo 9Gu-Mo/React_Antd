@@ -6,19 +6,14 @@ import { useState } from "react";
 type ListsState = Record<string, { id: string; text: string }[]>;
 
 const initial: ListsState = {
-  left: [
+  sample: [
     { id: "a", text: "472" },
     { id: "b", text: "195" },
     { id: "c", text: "218" },
     { id: "d", text: "643" },
-    { id: "e", text: "643" },
-    { id: "f", text: "001" },
-    { id: "g", text: "123" },
-    { id: "h", text: "456" },
-    { id: "i", text: "789" },
   ],
-  center: [],
-  right: [],
+  groupLeft: [],
+  groupRight: [],
 };
 
 const reorder = <T,>(list: T[], startIndex: number, endIndex: number): T[] => {
@@ -84,14 +79,14 @@ export default function DndEx() {
         <Title level={2}>Drag And Drop</Title>
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="dnd">
-            {(["left", "center", "right"] as const).map((droppableId) => (
+            {(["sample", "groupLeft", "groupRight"] as const).map((droppableId) => (
               <Droppable key={droppableId} droppableId={droppableId}>
                 {(provided) => (
                   // dnd 영역
                   <>
                     <div ref={provided.innerRef} {...provided.droppableProps} className="dnd-wrap">
                       <Title level={4}>
-                        {droppableId === "left" ? "평가샘플" : droppableId === "center" ? "A Group" : "B Group"}
+                        {droppableId === "sample" ? "평가샘플" : droppableId === "groupLeft" ? "A Group" : "B Group"}
                       </Title>
 
                       {/* dnd item */}
