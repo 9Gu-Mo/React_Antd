@@ -8,6 +8,8 @@ import BottomFixButton from "../components/common/BottomFixButton";
 import Notice from "../components/common/Notice";
 import SliderNineStep from "../components/common/SliderNineStep";
 import TextArea from "antd/es/input/TextArea";
+import SliderWithTable from "../components/common/SliderWithTable";
+import SliderWithTableTarget from "../components/common/SliderWithTableTarget";
 
 export default function DodEvaluation() {
   return (
@@ -35,8 +37,8 @@ export default function DodEvaluation() {
                 </Title>
               </Flex>
             </Space>
-            <SliderNineStep />
-            <SliderNineStep />
+            <SliderWithTable />
+            <SliderWithTableTarget />
             <SliderNineStep />
             <SliderNineStep />
           </div>

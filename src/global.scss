@@ -20,7 +20,7 @@ body {
   padding: 80px 0 48px;
 
   .main {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 }
 
@@ -332,11 +332,13 @@ h1.ant-typography {
   > article {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    // transform: translateX(-50%);
     font-weight: 600;
     font-size: 18px;
     color: #6152ed;
+    text-align: center;
   }
 
   &:where(*:hover) {
@@ -697,7 +699,7 @@ h1.ant-typography {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin: 0 auto;
+    margin: 0 auto 56px;
 
     em {
       font-size: 16px;
@@ -709,20 +711,21 @@ h1.ant-typography {
 
 // info
 .info {
-  strong {
-    font-size: 20px;
-    color: #aaaaaa;
+  > h5.ant-typography {
+    margin-top: 20px;
+  }
 
-    em {
-      color: #6152ed;
-      font-style: normal;
-    }
+  > span {
+    display: block;
+    margin-top: 8px;
   }
 }
 
 h2.ant-typography {
   &.product {
     margin-top: 40px;
+    font-weight: 500;
+    line-height: 36px;
 
     & + span.ant-typography {
       display: block;
@@ -743,12 +746,15 @@ h2.ant-typography {
     height: 100dvh;
   }
 
-  &-inner {
+  &-text {
     position: relative;
 
     > span {
       display: block;
       margin-top: 16px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #000;
     }
   }
 }

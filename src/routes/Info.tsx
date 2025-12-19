@@ -16,11 +16,14 @@ export default function Info() {
           Code <span className="ft-cl-primary">AB206</span>
         </Title>
         <Title level={2} className="product ft-al-cn">
-          신제품 개발
+          신제품 개발 Spicy Mandu
           <br />
-          Spicy Mandu
+          (매운만두)
         </Title>
-        <Text className="ft-al-cn">Spicy Ingredient (A, B, C)</Text>
+        <Title level={5} className="ft-al-cn">
+          사전검사
+        </Title>
+        <Text className="ft-al-cn">세 개의 샘플 중 다른 하나를 찾아 샘플 간 차이를 평가</Text>
         <AntdInput classNmae="mt-60" placeholder="이름을 입력해 주세요" label="이름" />
       </div>
       <BottomFixButton text="설문 시작" type="primary" />

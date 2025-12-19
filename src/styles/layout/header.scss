@@ -1,22 +1,30 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  padding: 18px 20px 18px 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 400px;
+  width: 100%;
+  padding: 18px 20px;
   background-color: white;
+  z-index: 10;
 
   > .ant-flex {
-    justify-content: space-between;
-  }
+    position: relative;
+    justify-content: center;
 
-  span {
-    font-size: 16px;
-    color: #999;
+    span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #999;
 
-    strong {
-      color: #24acf0;
-      font-weight: bold;
+      strong {
+        color: #24acf0;
+        font-weight: bold;
+      }
     }
   }
 }

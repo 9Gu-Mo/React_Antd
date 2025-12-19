@@ -51,7 +51,7 @@ export const antdTheme: ThemeConfig = {
     Typography: {
       // title font size
       fontSizeHeading1: 48,
-      fontSizeHeading2: 32,
+      fontSizeHeading2: 24,
       fontSizeHeading3: 20,
       fontSizeHeading4: 18,
       fontSizeHeading5: 16,

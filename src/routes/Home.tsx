@@ -6,7 +6,7 @@ import Typography from "antd/es/typography/Typography";
 import { useState } from "react";
 
 // component
-import BottomFixButton from "../components/common/BottomFixButton";
+// import BottomFixButton from "../components/common/BottomFixButton";
 import IconGlobal from "../components/Icon/IconGlobal";
 import IconArrowDown from "../components/Icon/IconArrowDown";
 import BottomModal from "../components/common/modal/BottomModal";
@@ -26,9 +26,9 @@ export default function Home() {
     setValue(e.target.value);
   };
 
-  const modalOpen = () => {
-    setAlert(!alert);
-  };
+  // const modalOpen = () => {
+  //   setAlert(!alert);
+  // };
 
   return (
     <>
@@ -88,7 +88,7 @@ export default function Home() {
         <br />
         확인 후 다시 입력해 주세요.
       </AlertModal>
-      <BottomFixButton text="확인" type="primary" onClick={modalOpen} />
+      {/* <BottomFixButton text="확인" type="primary" onClick={modalOpen} /> */}
     </>
   );
 }

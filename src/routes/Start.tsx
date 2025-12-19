@@ -11,7 +11,7 @@ export default function Start() {
       <div className="start">
         <img src="/bg.png" alt="안내 배경 이미지" />
 
-        <div className="start-inner">
+        <div className="start-text">
           <Title level={3}>안녕하세요</Title>
           <Text>
             테스트에 앞서 물을 준비해주세요.
