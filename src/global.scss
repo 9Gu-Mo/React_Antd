@@ -946,33 +946,40 @@ h2.ant-typography {
     font-size: 20px;
     font-weight: 500;
     text-align: center;
+    height: 56px;
   }
 
   &-ranking {
     display: grid;
     grid-template-columns: 63% 1fr;
-    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
     gap: 24px 12px;
     align-items: start;
 
     > div {
-      grid-column: 1;
-
       > .ant-typography {
         text-align: left;
       }
 
-      &:first-child {
-        grid-row: 1;
+      .dnd-title {
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 28px;
+        color: #6152ed;
+        text-align: center;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #6152ed;
+      }
 
+      &:first-child {
         .dnd-inner {
           max-width: 109px;
         }
       }
 
-      &:nth-child(2) {
-        grid-row: 2;
-
+      &:nth-child(2),
+      &:nth-child(3) {
         .dnd-inner {
           flex-direction: row;
           flex-wrap: wrap;
@@ -982,28 +989,22 @@ h2.ant-typography {
             width: calc((100% - 12px) / 2);
           }
         }
-      }
 
-      &:nth-child(3) {
-        grid-row: 3;
+        .dnd-title {
+          display: none;
+        }
       }
 
       &:last-child {
-        grid-column: 2;
         grid-row: 1 / 4;
-        height: 100%;
 
         .dnd-inner {
-          height: 100%;
+          height: 694px;
         }
       }
 
       .dnd-inner {
         height: 228px;
-      }
-
-      .dnd-item {
-        height: 56px;
       }
 
       .req {

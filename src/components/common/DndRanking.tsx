@@ -83,7 +83,7 @@ export default function DndRanking() {
   return (
     <>
       <Flex vertical gap={10}>
-        <Title level={2}>Drag And Drop</Title>
+        <Title level={2}>Ranking Drag And Drop</Title>
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="dnd dnd-ranking">
             {(["place1st", "pref", "prefN", "sample"] as const).map((droppableId) => (
@@ -92,6 +92,7 @@ export default function DndRanking() {
                   // dnd 영역
                   <>
                     <div ref={provided.innerRef} {...provided.droppableProps} className="dnd-wrap">
+                      <h3 className="dnd-title">{droppableId === "sample" ? "조사샘플" : "Ranking"}</h3>
                       {droppableId !== "sample" && (
                         <Title level={4}>
                           {droppableId === "place1st" ? (
