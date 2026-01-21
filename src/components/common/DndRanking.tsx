@@ -34,7 +34,7 @@ const move = <T,>(
   sourceList: T[],
   destList: T[],
   sourceIndex: number,
-  destIndex: number
+  destIndex: number,
 ): { source: T[]; destination: T[] } => {
   const sourceClone = Array.from(sourceList);
   const destClone = Array.from(destList);
@@ -69,7 +69,7 @@ export default function DndRanking() {
       lists[sourceId],
       lists[destId],
       source.index,
-      destination.index
+      destination.index,
     );
 
     // **기존 상태와 병합**하여 덮어쓰지 않음

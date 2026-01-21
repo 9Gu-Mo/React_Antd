@@ -48,7 +48,7 @@ export default function SliderNineStep() {
   return (
     <>
       <div className="slider-wrap">
-        <Typography>{displayTexts[sliderValue]}</Typography>
+        <Typography>{displayTexts[sliderValue] + sliderValue}</Typography>
         <Slider
           marks={marksNineStep}
           step={null}

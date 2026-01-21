@@ -1047,3 +1047,18 @@ h2.ant-typography {
     }
   }
 }
+
+.test {
+  .ant-tooltip-arrow {
+    &::before,
+    &::after {
+      background-color: #6152ed;
+    }
+  }
+  .ant-tooltip-inner {
+    background-color: #6152ed;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
