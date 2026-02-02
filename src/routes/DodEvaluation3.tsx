@@ -27,26 +27,6 @@ export default function DodEvaluation3() {
               <em>Q.</em>
             </Flex>
             <Flex vertical gap={4}>
-              <Title level={4}>제시된 샘플의 순위를 입력해 주세요.</Title>
-            </Flex>
-          </Space>
-          <div className="dnd">
-            <Flex gap={12} wrap>
-              <span>472</span>
-              <span>195</span>
-              <span>218</span>
-              <span>643</span>
-              <span>643</span>
-            </Flex>
-          </div>
-        </div>
-
-        <div className="content">
-          <Space direction="vertical">
-            <Flex>
-              <em>Q.</em>
-            </Flex>
-            <Flex vertical gap={4}>
               <Title level={4}>해당 제품을 더 선호하는 이유가 있다면 작성해 주세요.</Title>
             </Flex>
           </Space>

@@ -74,7 +74,6 @@ export default function SliderWithTableTarget() {
     <>
       <div className="slider-wrap slider-wrap-tbl">
         <Typography>
-          {/* 연산자 수정 예정 */}
           {`${marksTenStep[sliderValue]}${targetIndex.includes(curIndex) ? " / " : ""}${displayTexts[sliderValue]}`}
         </Typography>
         <Slider
