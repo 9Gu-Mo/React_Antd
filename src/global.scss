@@ -3,6 +3,7 @@ html {
   font-size: 62.5%;
   letter-spacing: -0.05em;
   font-family: "Pretendard", sans-serif;
+  background-color: #e5e5e5;
 }
 
 html,
@@ -18,6 +19,7 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
   padding-top: env(safe-area-inset-top);
   padding: 80px 0 48px;
+  background-color: #fff;
 
   .main {
     padding: 0 24px;
@@ -47,7 +49,10 @@ h1.ant-typography {
       position: relative;
       border-radius: 6px;
       justify-content: center;
-      transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+      transition:
+        color 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
 
       &-checked {
         border-color: #1677ff;
@@ -211,8 +216,8 @@ h1.ant-typography {
       &::before {
         width: 29px;
         height: 29px;
-        background: url("../public/icon-check.svg"),
-          linear-gradient(90deg, rgba(97, 82, 237, 1) 0%, rgba(91, 110, 237, 1) 100%);
+        background:
+          url("../public/icon-check.svg"), linear-gradient(90deg, rgba(97, 82, 237, 1) 0%, rgba(91, 110, 237, 1) 100%);
         background-repeat: no-repeat;
         background-position: center;
         box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.22);
@@ -389,7 +394,8 @@ h1.ant-typography {
       &:focus::after {
         width: 32px;
         height: 32px;
-        background: url("../public/icon-arrow-both.svg"),
+        background:
+          url("../public/icon-arrow-both.svg"),
           linear-gradient(90deg, rgba(97, 82, 237, 1) 0%, rgba(105, 145, 246, 1) 100%);
         background-repeat: no-repeat;
         background-position: center;
@@ -406,7 +412,8 @@ h1.ant-typography {
         left: 3% !important;
 
         &::after {
-          background: url("../public/icon-arrow-both.svg"),
+          background:
+            url("../public/icon-arrow-both.svg"),
             linear-gradient(90deg, rgba(173, 185, 194, 1) 0%, rgba(164, 169, 183, 1) 100%);
           background-repeat: no-repeat;
           background-position: center;
@@ -834,6 +841,10 @@ h2.ant-typography {
       }
     }
   }
+
+  .tbl {
+    margin-top: 30px;
+  }
 }
 
 .taste-label {
@@ -949,71 +960,58 @@ h2.ant-typography {
     height: 56px;
   }
 
-  &-ranking {
-    display: grid;
-    grid-template-columns: 63% 1fr;
-    grid-auto-flow: column;
-    gap: 24px 12px;
-    align-items: start;
+  &.dnd-ranking {
+    display: block;
 
-    > div {
-      > .ant-typography {
-        text-align: left;
+    .dnd-wrap {
+      .dnd-inner {
+        height: 170px;
+        gap: 12px;
+        overflow: auto;
+        align-content: baseline;
       }
 
-      .dnd-title {
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 28px;
-        color: #6152ed;
+      .dnd-item {
+        width: calc((100% - 24px) / 3);
+      }
+
+      & + .dnd-title {
+        margin-top: 20px;
+      }
+    }
+
+    .dnd-title {
+      color: #6152ed;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+  }
+
+  .dnd-ranking-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    > *:first-child {
+      .ant-typography {
         text-align: center;
-        padding-bottom: 12px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #6152ed;
-      }
-
-      &:first-child {
-        .dnd-inner {
-          max-width: 109px;
-        }
-      }
-
-      &:nth-child(2),
-      &:nth-child(3) {
-        .dnd-inner {
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-content: flex-start;
-
-          .dnd-item {
-            width: calc((100% - 12px) / 2);
-          }
-        }
-
-        .dnd-title {
-          display: none;
-        }
-      }
-
-      &:last-child {
-        grid-row: 1 / 4;
-
-        .dnd-inner {
-          height: 694px;
-        }
       }
 
       .dnd-inner {
-        height: 228px;
+        height: 82px;
       }
+    }
 
-      .req {
-        &::after {
-          content: "*";
-          font-size: 18px;
-          color: #f24f78;
-          margin-left: 5px;
-        }
+    .dnd-inner {
+      .dnd-item {
+        width: 100%;
+      }
+    }
+
+    .dnd-wrap:not(:first-child) {
+      .dnd-inner {
+        height: 216px;
       }
     }
   }
@@ -1061,4 +1059,9 @@ h2.ant-typography {
     font-size: 12px;
     font-weight: 500;
   }
+}
+
+.req {
+  color: #f24f78;
+  margin-left: 4px;
 }

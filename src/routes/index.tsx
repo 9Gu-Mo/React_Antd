@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
       { path: "triangle", element: <TriangleEvaluation /> }, // triangle
       { path: "dod", element: <DodEvaluation /> }, // dod
       { path: "dod2", element: <DodEvaluation2 /> }, // dod2
-      { path: "dod3", element: <DodEvaluation3 /> }, // dod2
+      { path: "dod3", element: <DodEvaluation3 /> }, // dod3
       { path: "cqe", element: <CQEvaluation /> }, // cqe(사내 품질 평가)
       { path: "cqe2", element: <CQEvaluation2 /> }, // cqe2(사내 품질 평가2)
       { path: "cqe3", element: <CQEvaluation3 /> }, // cqe3(사내 품질 평가3)
